@@ -18,7 +18,7 @@
         <p class="found">Page not found</p>
     </section>
     <footer>
-        <a href="https://github.com/Mirodeon" title="Profil Github">
+        <a href="home" title="home">
             <img src="./img/back-button.png" alt="back-button">
         </a>
     </footer>

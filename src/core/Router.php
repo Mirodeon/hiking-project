@@ -12,7 +12,7 @@ class Router
         if (array_key_exists($uri, $this->routes[$method])) {
             require_once $this->routes[$method][$uri];
         } else {
-            require_once $this->routes['GET']['/404'];
+            require "../app/views/404.php";
         }
     }
 }

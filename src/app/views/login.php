@@ -56,22 +56,35 @@ include "header.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/de0135f311.js" crossorigin="anonymous"></script> 
 </head>
 
 <body>
-    <div class="hero is-primary is-fullheight">
+    <div class="hero is-primary">
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-centered">
-                    <form action="" class="box">
+                    <form method="post" class="box">
                         <div class="field">
-                            <label for="" class="label">
-                                Email
-                            </label>
+                            <label for="login" class="label">Login</label>
                         </div>
                         <div class="control has-icons-left">
-                            <input type="email" class="input">
-                            <span class="icon"></span>
+                            <input type="text" class="input" placeholder="Your login">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-sign-in"></i>
+                            </span>
+                        </div>
+                        <div class="field">
+                            <label for="pass" class="label">Password</label>
+                        </div>
+                        <div class="control has-icons-left">
+                            <input type="text" class="input" placeholder="Your password">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        </div>
+                        <div class="field">
+                            <button class="button is-success">Login</button>
                         </div>
                     </form>
                 </div>
@@ -79,22 +92,6 @@ include "header.php";
         </div>
     </div>
 </body>
-
-    <h1>User Login</h1>
-
-    <form method="post" action="">
-        <div>
-            <label for="login">Login :</label>
-            <input type="text" name="login">
-        </div>
-        <div>
-            <label for="pass">Password</label>
-            <input type="text" name="pass">
-        </div>
-        <button type="submit">Login</button>
-    </form>
-</html>
-
 
 <?php
 include "footer.php";

@@ -2,7 +2,7 @@
   <div class="hero-body">
     <nav class="level">
       <p class="level-item has-text-centered">
-        <a class="link is-info">Home</a>
+        <a class="link is-info" href="home">Home</a>
       </p>
       <p class="level-item has-text-centered">
         <a class="link is-info">Menu</a>

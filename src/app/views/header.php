@@ -2,7 +2,7 @@
   <div class="container">
     <div class="navbar-brand">
       <a href="home" class="navbar-item" style="font-weight: bold;">
-        THE HINKING PROJECT
+        THE HIKING PROJECT
       </a>
       <span class="navbar-burger burger" data-target="navMenu">
         <span></span>

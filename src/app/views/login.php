@@ -52,7 +52,7 @@ if (!empty($_POST)) {
 <?php $title = "Login"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
-<div class="hero is-primary">
+<div class="hero is-primary" style="background-image: url('./img/wooden-track.jpg'); background-size: cover;">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-centered">

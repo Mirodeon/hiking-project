@@ -2,6 +2,43 @@
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 
+<section class="section" style="background-image: url('./img/mountain.jpg'); background-size: cover;">
+  <div class="container hero-body">
+    <div class="columns is-centered">
+      <div class="column is-half">
+      <p class="has-text-centered is-size-2 has-text-weight-bold has-text-white" style="text-shadow: 1px 1px 3px black;">Find your next hike</p>
+      <p class="control has-icons-left">
+          <input class="input is-info is-rounded" type="text" placeholder="Hike search">
+          <span class="icon is-left">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 
+
+<section class="hero is-medium is-success" style="background-image: url('./img/mountain.jpg'); background-size: cover;">
+  
+
+
+<div class="hero-body">
+    <p class="has-text-centered is-size-1 has-text-weight-bold" style="text-shadow: 1px 1px 3px grey;">Find your next hike</p>
+    <div class="column" style="width: 300px;">
+      <div class="panel-block">
+        <p class="control has-icons-left">
+          <input class="input is-info is-rounded" type="text" placeholder="Hike search">
+          <span class="icon is-left">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section> -->
 
 
 <!-- <div class="tile is-ancestor">

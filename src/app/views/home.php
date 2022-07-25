@@ -1,15 +1,6 @@
-<?php include 'header.php';
-?>
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Hiking Project</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
-  <body>
+<?php $title = "Home"; ?>
+<?php require "parts/head.php"; ?>
+<?php include 'header.php'; ?>
   <section class="section">
   <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
@@ -57,7 +48,4 @@
   </div>
 </div>
   </section>
-  </body>
-</html>
-<?php include 'footer.php';
-?>
+<?php include 'footer.php'; ?>

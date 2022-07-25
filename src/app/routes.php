@@ -6,6 +6,7 @@ $routes = [
         '' => 'app/views/home.php',
         '/404' => 'app/views/404.php',
         '/login' => 'app/views/login.php',
+        '/register' => 'app/views/register.php'
     ],
     'POST' => [
 

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php $title = "Register"; ?>
-=======
-<?php $title = "register"; ?>
->>>>>>> d11920b5cf98243ec977cecaf94627ebc2ba7483
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 <div class="hero is-primary">

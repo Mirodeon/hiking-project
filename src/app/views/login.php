@@ -74,7 +74,7 @@ if (!empty($_POST)) {
                         <span class="icon is-small is-left">
                             <i class="fa fa-lock"></i>
                         </span>
-                    </div>
+                    </div></br>
                     <div class="field">
                         <button class="button is-success">Login</button>
                     </div>

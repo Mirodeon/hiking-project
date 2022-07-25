@@ -17,4 +17,13 @@ catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }
-?>
+/*$query = $db->query("INSERT INTO `medias`(`name`, `file`, `hikes_id`, `type`) 
+VALUES ('Pouet','Pouet', '1','Pouet')");
+if ($query === false) {
+    var_dump($db->errorInfo());
+    die('Erreur SQL');
+}
+$posts = $query->fetchAll(PDO::FETCH_OBJ);
+echo "<pre>";
+print_r($posts);
+echo "</pre>";*/

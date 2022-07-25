@@ -1,4 +1,4 @@
-<?php $title = "Login"; ?>
+<?php $title = "Register"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 <div class="hero is-primary">

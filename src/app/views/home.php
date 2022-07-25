@@ -1,8 +1,10 @@
 <?php $title = "Home"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
-<!-- <section class="section">
-  <div class="tile is-ancestor">
+
+
+
+<!-- <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
       <div class="tile is-parent is-vertical">

@@ -7,52 +7,52 @@
             <div class="columns is-centered">
                 <form method="post" class="box">
                     <div class="field">
-                        <label for="firstname" class="label">Firstname</label>
+                        <label for="firstname" class="label is-small">Firstname</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input" placeholder="Your firstname">
+                        <input type="text" class="input is-small" placeholder="firstname">
                         <span class="icon is-small is-left">
                             <i class="fa fa-user-o"></i>
                         </span>
                     </div>
                     <div class="field">
-                        <label for="lastname" class="label">Lastname</label>
+                        <label for="lastname" class="label is-small">Lastname</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input" placeholder="Your lastname">
+                        <input type="text" class="input is-small" placeholder="Lastname">
                         <span class="icon is-small is-left">
                             <i class="fa fa-user-o"></i>
                         </span>
                     </div>
                     <div class="field">
-                        <label for="email" class="label">Email</label>
+                        <label for="email" class="label is-small">Email</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="email" class="input" placeholder="Your email adress">
+                        <input type="email" class="input is-small" placeholder="Email adress">
                         <span class="icon is-small is-left">
                             <i class="fa fa-envelope-o"></i>
                         </span>
                     </div>
                     <div class="field">
-                        <label for="login" class="label">Login</label>
+                        <label for="username" class="label is-small">Username</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input" placeholder="Your login">
+                        <input type="text" class="input is-small" placeholder="Username">
                         <span class="icon is-small is-left">
                             <i class="fa fa-sign-in"></i>
                         </span>
                     </div>
                     <div class="field">
-                        <label for="pass" class="label">Password</label>
+                        <label for="pass" class="label is-small">Password</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input" placeholder="Your password">
+                        <input type="text" class="input is-small" placeholder="Password">
                         <span class="icon is-small is-left">
                             <i class="fa fa-lock"></i>
                         </span>
                     </div></br>
                     <div class="field">
-                        <button class="button is-success">Sign up</button>
+                        <button class="button is-success is-small">Sign up</button>
                     </div>
                 </form>
             </div>

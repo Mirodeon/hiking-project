@@ -58,25 +58,25 @@ if (!empty($_POST)) {
             <div class="columns is-centered">
                 <form method="post" class="box">
                     <div class="field">
-                        <label for="login" class="label">Login</label>
+                        <label for="username" class="label is-small">Username</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input" placeholder="Your login">
+                        <input type="text" class="input is-small" placeholder="Username">
                         <span class="icon is-small is-left">
                             <i class="fa fa-sign-in"></i>
                         </span>
                     </div>
                     <div class="field">
-                        <label for="pass" class="label">Password</label>
+                        <label for="pass" class="label is-small">Password</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input" placeholder="Your password">
+                        <input type="text" class="input is-small" placeholder="Password">
                         <span class="icon is-small is-left">
                             <i class="fa fa-lock"></i>
                         </span>
                     </div></br>
                     <div class="field">
-                        <button class="button is-success">Login</button>
+                        <button class="button is-success is-small">Login</button>
                     </div>
                 </form>
             </div>

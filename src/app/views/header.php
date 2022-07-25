@@ -19,7 +19,7 @@
       <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
+          <a class="button is-primary" href="register">
             <strong>Sign up</strong>
           </a>
           <a class="button is-light" href="login">
@@ -31,9 +31,10 @@
     </div>
   </div>
 </nav>
+
 <section class="hero is-success" style="background-image: url('./img/man-731900_1280.jpg'); background-size: cover;">
   <div class="hero-body">
-  <div class="panel-block">
+    <div class="panel-block">
     <p class="control has-icons-left">
       <input class="input is-primary end" type="text" placeholder="Hike search" style="width: 300px;">
       <span class="icon is-left">

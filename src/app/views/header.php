@@ -1,85 +1,57 @@
-<!-- <section class="hero is-success">
-  <div class="hero-body">
-    <nav class="level">
-      <p class="level-item has-text-centered">
-        <a class="link is-info" href="home" title="home">Home</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a class="link is-info">Menu</a>
-      </p>
-      <p class="title">
-          <strong>HIKING PROJECT</strong>
-        </p>
-      <p class="level-item has-text-centered">
-        <a class="link is-info" href="login" title="login">Login</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a class="link is-info">Contact</a>
-      </p>
-    </nav>  
-  </div>
-</section> -->
-<section class="hero is-link">
-<div class="hero-body">
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <!-- <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-    </a> -->
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
+<nav class="navbar is-info">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="home" class="navbar-item" style="font-weight: bold;">
+        THE HINKING PROJECT
       </a>
-
-      <a class="navbar-item">
-        Documentation
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      </div>
+      <span class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
     </div>
-
-    <div class="navbar-end">
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        <a href="home" class="navbar-item is-active">Home</a>
+        <a href="#" class="navbar-item">Menu</a>
+        <a href="#" class="navbar-item">Contact</a>
+      </div>
+      <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
             <strong>Sign up</strong>
           </a>
-          <a class="button is-light">
+          <a class="button is-light" href="login">
             Log in
           </a>
         </div>
       </div>
     </div>
+    </div>
   </div>
 </nav>
-</div>
+<section class="hero is-success" style="background-image: url('./img/man-731900_1280.jpg'); background-size: cover;">
+  <div class="hero-body">
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <input class="input is-primary end" type="text" placeholder="Hike search" style="width: 300px;">
+      <span class="icon is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </p>
+  </div>
+  </div>
 </section>
+<script type="text/javascript">
+  (function(){
+    var burger = document.querySelector('.burger');
+    var nav = document.queryselector('#'+burger.dataset.target);
+
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('is-active');
+      nav.classList.toggle('is-active');
+    });
+  })();
+</script>
+

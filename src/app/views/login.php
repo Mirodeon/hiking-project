@@ -51,7 +51,6 @@ if (!empty($_POST)) {
 ?>
 <?php $title = "Login"; ?>
 <?php require "parts/head.php"; ?>
-<script src="https://kit.fontawesome.com/de0135f311.js" crossorigin="anonymous"></script>
 <?php include 'header.php'; ?>
 <div class="hero is-primary">
     <div class="hero-body">

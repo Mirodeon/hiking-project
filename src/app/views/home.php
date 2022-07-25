@@ -1,7 +1,7 @@
 <?php $title = "Home"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
-  <section class="section">
+  <!-- <section class="section">
   <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
@@ -30,7 +30,6 @@
         <p class="title">Wide tile</p>
         <p class="subtitle">Aligned with the right tile</p>
         <div class="content">
-          <!-- Content -->
         </div>
       </article>
     </div>
@@ -41,11 +40,10 @@
         <p class="title">Tall tile</p>
         <p class="subtitle">With even more content</p>
         <div class="content">
-          <!-- Content -->
         </div>
       </div>
     </article>
   </div>
-</div>
+</div> -->
   </section>
 <?php include 'footer.php'; ?>

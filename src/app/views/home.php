@@ -37,7 +37,7 @@
           <div class="media">
             <div class="media-content">
               <p class="title is-4">John Smith</p>
-              <p class="subtitle is-6">johnsmith123</p>
+              <p class="subtitle is-6">@johnsmith123</p>
             </div>
           </div>
 
@@ -45,13 +45,13 @@
             <div class="level-item has-text-centered">
               <div>
                 <p class="heading">Distance</p>
-                <p>3,45km</p>
+                <p>9,8km</p>
               </div>
             </div>
             <div class="level-item has-text-centered">
               <div>
                 <p class="heading">Duration</p>
-                <p>1h15</p>
+                <p>2h40</p>
               </div>
             </div>
             <div class="level-item has-text-centered">
@@ -63,9 +63,8 @@
           </nav>
 
           <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
+          Parcourez cet itinéraire en boucle de 9,8-km près de Liège, Province de Liège. Généralement considéré comme un parcours modéré, il faut en moyenne 2 h 41 min pour le parcourir. Cet itinéraire est idéal pour la randonnée, la course à pied et la balade.
+            <a href="#">#wood</a> <a href="#">#grass</a>
             <br>
             <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
           </div>
@@ -82,8 +81,8 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <p class="title is-4">Florian Bos</p>
-              <p class="subtitle is-6">F_boss</p>
+              <p class="title is-4">Florian Bosman</p>
+              <p class="subtitle is-6">@F_boss</p>
             </div>
           </div>
 
@@ -110,8 +109,8 @@
 
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
+            Phasellus nec iaculis mauris.
+            <a href="#">#mountain</a> <a href="#">#snow</a> <a href="#">#hill</a>
             <br>
             <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
           </div>
@@ -129,7 +128,7 @@
           <div class="media">
             <div class="media-content">
               <p class="title is-4">Patrick Pavel</p>
-              <p class="subtitle is-6">PavPat24</p>
+              <p class="subtitle is-6">@PavPat24</p>
             </div>
           </div>
 
@@ -156,8 +155,8 @@
 
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
+            Phasellus nec iaculis mauris.
+            <a href="#">#mountain</a> <a href="#">#sea</a>
             <br>
             <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
           </div>
@@ -175,7 +174,7 @@
           <div class="media">
             <div class="media-content">
               <p class="title is-4">Marie Sergi</p>
-              <p class="subtitle is-6">Ma_Sergi8</p>
+              <p class="subtitle is-6">@Ma_Sergi8</p>
             </div>
           </div>
 
@@ -202,8 +201,8 @@
 
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
+            Phasellus nec iaculis mauris.
+            <a href="#">#hill</a> <a href="#">#lake</a> <a href="#">#autumn</a>
             <br>
             <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
           </div>

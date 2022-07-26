@@ -24,7 +24,7 @@
   </div>
 </section>
 <section class="section hike-list">
-<p class="is-size-4 has-text-weight-bold">Last four hikes</p></br>  
+<p class="is-size-4 has-text-weight-bold">Last four</p></br>  
   <div class="columns">
     <div class="column">
       <div class="card">

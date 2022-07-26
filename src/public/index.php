@@ -8,7 +8,7 @@ $method = Request::method();
 $router = new Router();
 $router->register($routes);
 $router->direct($uri, $method);
-try
+/*try
 {
 	$db = new MyPDO();
     echo '<span class="tag is-success is-light">Connected to db !</span>';
@@ -16,6 +16,16 @@ try
 catch (Exception $e)
 {
         die('<span class="tag is-danger is-light">Error : </span>' . $e->getMessage());
+}*/
+/*$query = $db->query("INSERT INTO `medias`(`name`, `file`, `hikes_id`, `type`) 
+VALUES ('Pouet','Pouet', '1','Pouet')");
+if ($query === false) {
+    var_dump($db->errorInfo());
+    die('Erreur SQL');
 }
-?>
-<?php include '../app/views/parts/modal.php'; ?>
+$posts = $query->fetchAll(PDO::FETCH_OBJ);
+echo "<pre>";
+print_r($posts);
+echo "</pre>";
+include '../app/views/parts/modal.php';*/        
+

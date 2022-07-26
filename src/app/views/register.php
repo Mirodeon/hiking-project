@@ -38,7 +38,6 @@ if (!empty($_POST)) {
             "login" => $login,
             "email" => $_POST["email"]
         ];
-        $q->execute();
     } else {
         die("form incomplete");
     }
@@ -98,7 +97,7 @@ if (!empty($_POST)) {
                         </span>
                     </div></br>
                     <div class="field">
-                        <button class="button is-success" type="submit" value="register" name="register">Sign up</button>
+                        <button class="button is-success" type="submit" name="register">Sign up</button>
                     </div>
                 </form>
             </div>

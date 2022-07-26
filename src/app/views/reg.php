@@ -44,14 +44,13 @@ if (!empty($_POST)) {
     }
 }
 ?>
-
 <?php $title = "Register"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 <div class="hero is-primary">
-    <div class="hero-body" style="background-image: url('./img/wooden-track.jpg'); background-size: cover;">
+    <div class="hero-body">
         <div class="container">
-        <div class="columns is-centered">
+            <div class="columns is-centered">
                 <form method="post" class="box" action="welcome">
                     <div class="field">
                         <label for="firstname" class="label">Firstname</label>

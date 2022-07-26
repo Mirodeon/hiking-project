@@ -11,11 +11,11 @@ $router->direct($uri, $method);
 /*try
 {
 	$db = new MyPDO();
-    echo 'connected to db !';
+    echo '<span class="tag is-success is-light">Connected to db !</span>';
 }
 catch (Exception $e)
 {
-        die('Erreur : ' . $e->getMessage());
+        die('<span class="tag is-danger is-light">Error : </span>' . $e->getMessage());
 }*/
 /*$query = $db->query("INSERT INTO `medias`(`name`, `file`, `hikes_id`, `type`) 
 VALUES ('Pouet','Pouet', '1','Pouet')");
@@ -26,4 +26,6 @@ if ($query === false) {
 $posts = $query->fetchAll(PDO::FETCH_OBJ);
 echo "<pre>";
 print_r($posts);
-echo "</pre>";*/
+echo "</pre>";
+include '../app/views/parts/modal.php';*/        
+

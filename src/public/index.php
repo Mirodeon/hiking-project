@@ -8,7 +8,7 @@ $method = Request::method();
 $router = new Router();
 $router->register($routes);
 $router->direct($uri, $method);
-try
+/*try
 {
 	$db = new MyPDO();
     echo 'connected to db !';
@@ -16,7 +16,7 @@ try
 catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
-}
+}*/
 /*$query = $db->query("INSERT INTO `medias`(`name`, `file`, `hikes_id`, `type`) 
 VALUES ('Pouet','Pouet', '1','Pouet')");
 if ($query === false) {

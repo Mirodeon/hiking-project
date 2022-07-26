@@ -8,7 +8,7 @@ $method = Request::method();
 $router = new Router();
 $router->register($routes);
 $router->direct($uri, $method);
-/* try
+try
 {
 	$db = new MyPDO();
     echo '<span class="tag is-success is-light">Connected to db !</span>';
@@ -16,6 +16,6 @@ $router->direct($uri, $method);
 catch (Exception $e)
 {
         die('<span class="tag is-danger is-light">Error : </span>' . $e->getMessage());
-} */
+}
 ?>
 <?php include '../app/views/parts/modal.php'; ?>

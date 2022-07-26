@@ -17,7 +17,8 @@ if (isset($_POST["submit"])) {
         "firstname" => $_POST["firstname"],
         "lastname" => $_POST["lastname"],
         "login" => $_POST["login"],
-        "email" => $_POST["email"]
+        "email" => $_POST["email"],
+        "permission" => "utilisateur"
     ];
     header("location: welcome");
 }

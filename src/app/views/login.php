@@ -1,4 +1,4 @@
-<?php
+<!--<?php
 
 // open the $_SESSION
 session_start();
@@ -48,7 +48,11 @@ if (!empty($_POST)) {
     }
 }
 
-?>
+?>-->
+<?php session_start(); ?>
+<?php if (isset($_SESSION["user"])) {
+    header("location: home");
+} ?>
 <?php $title = "Login"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>

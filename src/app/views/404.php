@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php $title = "404"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>

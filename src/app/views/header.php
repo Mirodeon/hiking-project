@@ -19,12 +19,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary is-small js-modal-trigger" href="register" > <!-- data-target="modal-signup" -->
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light is-small js-modal-trigger" href="login" > <!-- data-target="modal-login" -->
-              Login
-            </a>
+          <?php include '../app/controllers/signBtn.php'; ?>
           </div>
         </div>
       </div>

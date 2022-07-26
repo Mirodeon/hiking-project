@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php $title = "Contact"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>

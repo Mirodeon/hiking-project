@@ -1,4 +1,7 @@
 <?php session_start(); ?>
+<?php if (isset($_SESSION["user"])) {
+    header("location: home");
+} ?>
 <?php $title = "Register"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>

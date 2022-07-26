@@ -17,7 +17,22 @@
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         <a href="home" class="navbar-item">Home</a>
-        <a href="#" class="navbar-item">Menu</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Activity
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              All hikes
+            </a>
+            <a class="navbar-item">
+              Your hikes
+            </a>
+            <a class="navbar-item">
+              Create new
+            </a>
+          </div>
+        </div>
         <a href="contact" class="navbar-item">Contact</a>
       </div>
       <div class="navbar-end">

@@ -6,7 +6,7 @@
   <div class="container">
     <div class="navbar-brand">
       <a href="home" class="navbar-item is-size-5" style="font-family: 'Mochiy Pop One', sans-serif;">
-        The hiking project
+        Elderberry
       </a>
       <span class="navbar-burger burger" data-target="navMenu">
         <span></span>

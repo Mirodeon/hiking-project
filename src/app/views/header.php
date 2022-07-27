@@ -22,13 +22,13 @@
             Activity
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a class="navbar-item" href="allHikes">
               All hikes
             </a>
-            <a class="navbar-item">
+            <a class="navbar-item" href="myHikes">
               My hikes
             </a>
-            <a class="navbar-item">
+            <a class="navbar-item" href="addHike">
               Add hikes
             </a>
           </div>

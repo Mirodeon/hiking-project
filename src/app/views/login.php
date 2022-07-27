@@ -23,7 +23,7 @@
                         <label for="pass" class="label is-small">Password</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input is-small" placeholder="Password" name="pass">
+                        <input type="password" class="input is-small" placeholder="Password" name="pass">
                         <span class="icon is-small is-left">
                             <i class="fa fa-lock"></i>
                         </span>

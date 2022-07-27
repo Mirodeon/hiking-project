@@ -14,7 +14,7 @@
                         <label for="firstname" class="label is-small">Firstname</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input is-small" placeholder="Your firstname" name="firstname">
+                        <input type="text" class="input is-small" placeholder="Your firstname" name="firstname" autocomplete="off">
                         <span class="icon is-small is-left">
                             <i class="fa fa-user-o"></i>
                         </span>
@@ -23,7 +23,7 @@
                         <label for="lastname" class="label is-small">Lastname</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input is-small" placeholder="Your lastname" name="lastname">
+                        <input type="text" class="input is-small" placeholder="Your lastname" name="lastname" autocomplete="off">
                         <span class="icon is-small is-left">
                             <i class="fa fa-user-o"></i>
                         </span>
@@ -32,7 +32,7 @@
                         <label for="email" class="label is-small">Email</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="email" class="input is-small" placeholder="Your email adress" name="email">
+                        <input type="email" class="input is-small" placeholder="Your email adress" name="email" autocomplete="off">
                         <span class="icon is-small is-left">
                             <i class="fa fa-envelope-o"></i>
                         </span>
@@ -41,7 +41,7 @@
                         <label for="login" class="label is-small">Login</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input is-small" placeholder="Your login" name="login">
+                        <input type="text" class="input is-small" placeholder="Your login" name="login" autocomplete="off">
                         <span class="icon is-small is-left">
                             <i class="fa fa-sign-in"></i>
                         </span>
@@ -50,7 +50,7 @@
                         <label for="pass" class="label is-small">Password</label>
                     </div>
                     <div class="control has-icons-left">
-                        <input type="text" class="input is-small" placeholder="Your password" name="pass">
+                        <input type="password" class="input is-small" placeholder="Your password" name="pass" autocomplete="off">
                         <span class="icon is-small is-left">
                             <i class="fa fa-lock"></i>
                         </span>

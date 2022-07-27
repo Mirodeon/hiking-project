@@ -6,7 +6,7 @@
   <div class="container">
     <div class="navbar-brand">
       <a href="home" class="navbar-item is-size-5" style="font-family: 'Mochiy Pop One', sans-serif;">
-        Elderberry
+        <span><img src="./img/rando-icone.png" alt="Elderberry logo"></span>&nbsp;&nbsp;Elderberry       
       </a>
       <span class="navbar-burger burger" data-target="navMenu">
         <span></span>

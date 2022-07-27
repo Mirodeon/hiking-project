@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_POST["submit"])) {
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
@@ -12,5 +13,9 @@ if (isset($_POST["submit"])) {
     require_once '../app/models/checkSignup.php';
     $signup = new SignupCheck($firstname, $lastname, $login, $email, $password, $permission);
     $signup->signupUser();
+    require_once '../app/models/loginDb.php';
+    require_once '../app/models/checkLogin.php';
+    $login = new LoginContr($login, $password);
+    $login->loginUser();
     header("location: welcome");
 }

@@ -1,4 +1,9 @@
-<?php $title = "Home"; ?>
+<?php session_start(); ?>
+<?php if (isset($_SESSION["user"])) {
+  $title = "Home - " . $_SESSION["user"]["login"];
+} else {
+  $title = "Home";
+} ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 

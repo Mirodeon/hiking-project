@@ -1,4 +1,7 @@
 <?php session_start(); ?>
+<?php if (isset($_SESSION["user"])) {
+    header("location: home");
+} ?>
 <?php $title = "Register"; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
@@ -53,11 +56,13 @@
                         </span>
                     </div></br>
                     <div class="field">
-                        <button class="button is-success is-small" type="submit" name="submit" value="submit">Sign up</button>
+                        <button class="button is-success is-small" type="submit" name="submit" value="register">Sign up</button>
                     </div>
+                    <p class="label is-small has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
                 </form>
             </div>
         </div>
     </div>
 </div>
+<?php unset($_SESSION["error"]); ?>
 <?php include "footer.php"; ?>

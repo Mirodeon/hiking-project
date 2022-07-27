@@ -22,18 +22,18 @@ class SignupCheck extends Signup
     {
         session_start();
         if ($this->emptyInput() == false) {
-            header("location: 404");
-            $_SESSION['error'] = "Form incomplete.";
+            header("location: register");
+            $_SESSION['error'] = "Form incomplete";
             exit();
         }
         if ($this->invalidLogin() == false) {
-            header("location: 404");
-            $_SESSION['error'] = "Invalid login.";
+            header("location: register");
+            $_SESSION['error'] = "Invalid login";
             exit();
         }
         if ($this->invalidEmail() == false) {
-            header("location: 404");
-            $_SESSION['error'] = "Invalid email.";
+            header("location: register");
+            $_SESSION['error'] = "Invalid email";
             exit();
         }
         /*if ($this->passwordMatch() == false) {
@@ -42,7 +42,7 @@ class SignupCheck extends Signup
             exit();
         }*/ //confirm password if double input password.
         if ($this->check() == false) {
-            header("location: 404");
+            header("location: register");
             $_SESSION['error'] = "Login or Email is already taken.";
             exit();
         }

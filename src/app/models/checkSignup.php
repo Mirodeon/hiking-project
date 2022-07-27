@@ -43,7 +43,7 @@ class SignupCheck extends Signup
         }*/ //confirm password if double input password.
         if ($this->check() == false) {
             header("location: register");
-            $_SESSION['error'] = "Login or Email is already taken";
+            $_SESSION['error'] = "Login or Email is already taken.";
             exit();
         }
         $this->setUser($this->firstname, $this->lastname, $this->login, $this->email, $this->password, $this->permission);

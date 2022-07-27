@@ -5,7 +5,6 @@ class Signup extends Dbconnect
     protected function setUser($firstname, $lastname, $login, $email, $password, $permission)
     {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-        echo " .!. " . $hashed_password . " .!. ";
         $q = $this->connect()->prepare("INSERT INTO `users`(`firstname`, `lastname`, `nickname`, `email`, `password`, `permission`) 
         VALUES (:firstname, :lastname, :nickname, :email, :pass, :permission)");
         $q->bindParam(":firstname", $firstname);

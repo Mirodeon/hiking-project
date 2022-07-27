@@ -26,10 +26,10 @@
               All hikes
             </a>
             <a class="navbar-item">
-              Your hikes
+              My hikes
             </a>
             <a class="navbar-item">
-              Create new
+              Add hikes
             </a>
           </div>
         </div>

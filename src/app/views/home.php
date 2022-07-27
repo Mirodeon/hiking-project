@@ -28,6 +28,7 @@
     </div>
   </div>
 </section>
+
 <section class="section hike-list">
 <p class="is-size-4 has-text-weight-bold">Last four</p></br>  
   <div class="columns">
@@ -45,7 +46,6 @@
               <p class="subtitle is-6">@johnsmith123</p>
             </div>
           </div>
-
           <nav class="level">
             <div class="level-item has-text-centered">
               <div>
@@ -66,7 +66,6 @@
               </div>
             </div>            
           </nav>
-
           <div class="content">
           Parcourez cet itinéraire en boucle de 9,8-km près de Liège, Province de Liège. Généralement considéré comme un parcours modéré, il faut en moyenne 2 h 41 min pour le parcourir. Cet itinéraire est idéal pour la randonnée, la course à pied et la balade.
             <a href="#">#wood</a> <a href="#">#grass</a>
@@ -76,6 +75,7 @@
         </div>
       </div>
     </div>
+
     <div class="column">
       <div class="card">
         <div class="card-image">
@@ -90,7 +90,6 @@
               <p class="subtitle is-6">@F_boss</p>
             </div>
           </div>
-
           <nav class="level">
             <div class="level-item has-text-centered">
               <div>
@@ -111,7 +110,6 @@
               </div>
             </div>            
           </nav>
-
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Phasellus nec iaculis mauris.
@@ -122,6 +120,7 @@
         </div>
       </div>
     </div>
+
     <div class="column">
       <div class="card">
         <div class="card-image">
@@ -136,7 +135,6 @@
               <p class="subtitle is-6">@PavPat24</p>
             </div>
           </div>
-
           <nav class="level">
             <div class="level-item has-text-centered">
               <div>
@@ -157,7 +155,6 @@
               </div>
             </div>            
           </nav>
-
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Phasellus nec iaculis mauris.
@@ -168,6 +165,7 @@
         </div>
       </div>
     </div>
+
     <div class="column">
       <div class="card">
         <div class="card-image">
@@ -182,7 +180,6 @@
               <p class="subtitle is-6">@Ma_Sergi8</p>
             </div>
           </div>
-
           <nav class="level">
             <div class="level-item has-text-centered">
               <div>
@@ -203,7 +200,6 @@
               </div>
             </div>            
           </nav>
-
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Phasellus nec iaculis mauris.

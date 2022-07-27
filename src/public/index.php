@@ -27,5 +27,7 @@ $posts = $query->fetchAll(PDO::FETCH_OBJ);
 echo "<pre>";
 print_r($posts);
 echo "</pre>";
-include '../app/views/parts/modal.php';*/        
+
+include '../app/views/parts/modal.php';   
+js-modal-trigger  */    
 

@@ -5,7 +5,7 @@ if (isset($_SESSION["user"])) { ?>
         <!-- data-target="modal-signup" -->
         <strong>Log out</strong>
     </a>
-    <a class="button is-light is-small js-modal-trigger" href="profil">
+    <a class="button is-light is-small js-modal-trigger" href="profile">
         <!-- data-target="modal-login" -->
         <?php echo $_SESSION["user"]["login"]; ?>
     </a>

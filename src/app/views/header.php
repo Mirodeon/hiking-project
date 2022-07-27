@@ -13,7 +13,7 @@
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
         <a href="home" class="navbar-item">Home</a>
-        <a href="#" class="navbar-item">Menu</a>
+        <a href="menu" class="navbar-item">Menu</a>
         <a href="contact" class="navbar-item">Contact</a>
       </div>
       <div class="navbar-end">

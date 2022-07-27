@@ -1,5 +1,9 @@
 <?php session_start(); ?>
-<?php $title = "404"; ?>
+<?php if (isset($_SESSION["user"])) {
+    $title = "404 - " . $_SESSION["user"]["login"];
+} else {
+    $title = "404";
+} ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 <div class="hero is-primary">

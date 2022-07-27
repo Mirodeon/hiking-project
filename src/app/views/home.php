@@ -1,5 +1,9 @@
 <?php session_start(); ?>
-<?php $title = "Home"; ?>
+<?php if (isset($_SESSION["user"])) {
+  $title = "Home - " . $_SESSION["user"]["login"];
+} else {
+  $title = "Home";
+} ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 
@@ -7,8 +11,8 @@
   <div class="container hero-body">
     <div class="columns is-centered">
       <div class="column is-half">
-      <p class="has-text-centered is-size-2 has-text-weight-bold has-text-white" style="text-shadow: 1px 1px 3px black;">Find your next hike</p>
-      <p class="control has-icons-left">
+        <p class="has-text-centered is-size-2 has-text-weight-bold has-text-white" style="text-shadow: 1px 1px 3px black;">Find your next hike</p>
+        <p class="control has-icons-left">
           <input class="input is-info is-rounded" type="text" placeholder="Hike search">
           <span class="icon is-left">
             <i class="fas fa-search" aria-hidden="true"></i>

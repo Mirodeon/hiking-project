@@ -13,12 +13,9 @@ if (isset($_POST["submit"])) {
     require_once '../app/models/checkSignup.php';
     $signup = new SignupCheck($firstname, $lastname, $login, $email, $password, $permission);
     $signup->signupUser();
-    $_SESSION["user"] = [
-        "firstname" => $_POST["firstname"],
-        "lastname" => $_POST["lastname"],
-        "login" => $_POST["login"],
-        "email" => $_POST["email"],
-        "permission" => "utilisateur"
-    ];
+    require_once '../app/models/loginDb.php';
+    require_once '../app/models/checkLogin.php';
+    $login = new LoginContr($login, $password);
+    $login->loginUser();
     header("location: welcome");
 }

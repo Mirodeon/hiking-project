@@ -9,9 +9,13 @@ $routes = [
         '/register' => 'app/views/register.php',
         '/welcome' => 'app/views/welcome.php',
         '/contact' => 'app/views/contact.php',
-        '/logout' => 'app/controllers/logOut.php'
+        '/logout' => 'app/controllers/logOut.php',
+        '/profile' => 'app/views/profile.php',
+        '/menu' => 'app/views/menu.php',
+        '/addHike' => 'app/views/addHike.php'
     ],
     'POST' => [
-        '/signup' => 'app/controllers/signupContr.php'
+        '/signup' => 'app/controllers/signupContr.php',
+        '/login' => 'app/controllers/loginContr.php'
     ],
 ];

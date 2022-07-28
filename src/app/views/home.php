@@ -8,7 +8,7 @@
 <?php include 'header.php'; ?>
 
 <style>
-  .hike-list{
+  .hike-list {
     padding-top: 10px;
   }
 </style>
@@ -26,11 +26,14 @@
         </p>
       </div>
     </div>
+
+    <?php include 'parts/dropDownTag.php'; ?>    
+
   </div>
 </section>
 
 <section class="section hike-list">
-<p class="is-size-4 has-text-weight-bold">Last four</p></br>  
+  <p class="is-size-4 has-text-weight-bold">Last four</p></br>
   <div class="columns">
     <div class="column">
       <div class="card">
@@ -64,10 +67,10 @@
                 <p class="heading">Elevation</p>
                 <p>700m</p>
               </div>
-            </div>            
+            </div>
           </nav>
           <div class="content">
-          Parcourez cet itinéraire en boucle de 9,8-km près de Liège, Province de Liège. Généralement considéré comme un parcours modéré, il faut en moyenne 2 h 41 min pour le parcourir. Cet itinéraire est idéal pour la randonnée, la course à pied et la balade.
+            Parcourez cet itinéraire en boucle de 9,8-km près de Liège, Province de Liège. Généralement considéré comme un parcours modéré, il faut en moyenne 2 h 41 min pour le parcourir. Cet itinéraire est idéal pour la randonnée, la course à pied et la balade.
             <a href="#">#wood</a> <a href="#">#grass</a>
             <br>
             <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
@@ -108,7 +111,7 @@
                 <p class="heading">Elevation</p>
                 <p>700m</p>
               </div>
-            </div>            
+            </div>
           </nav>
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -153,7 +156,7 @@
                 <p class="heading">Elevation</p>
                 <p>700m</p>
               </div>
-            </div>            
+            </div>
           </nav>
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -198,7 +201,7 @@
                 <p class="heading">Elevation</p>
                 <p>700m</p>
               </div>
-            </div>            
+            </div>
           </nav>
           <div class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

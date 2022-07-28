@@ -6,9 +6,10 @@
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 </br>
-<section class="container">
-    <div class="column is-half is-offset-one-quarter has-text-centered">
-        <article class="panel is-primary">
+<div class="hero-body">
+<section class="container" >
+    <div class="column is-half is-offset-one-quarter has-text-centered" >
+        <article class="panel is-primary" >
             <p class="panel-heading">User profile</p></br>
             <div class="blabla">
                 <div class="field">
@@ -93,6 +94,7 @@
     </div>
 
 </section>
+
 </br>
 <?php include "footer.php"; ?>
 

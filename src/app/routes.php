@@ -16,6 +16,7 @@ $routes = [
     ],
     'POST' => [
         '/signup' => 'app/controllers/signupContr.php',
-        '/login' => 'app/controllers/loginContr.php'
+        '/login' => 'app/controllers/loginContr.php',
+        '/addHike' => 'app/controllers/addHikesContr.php'
     ],
 ];

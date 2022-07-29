@@ -4,7 +4,7 @@ class currentDate
     public static function getDate(): string
     {
         try {
-            date_default_timezone_set('Europe/Bruxelles');
+            date_default_timezone_set('Europe/Paris');
             $date = date('d/m/y h:i');
             return $date;
         } catch (Exception $e) {

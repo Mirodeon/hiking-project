@@ -16,7 +16,7 @@ class addHikeCheck extends addHikeDb
         $this->date = $date;
         $this->distance = $distance;
         $this->durationH = $durationH;
-        $this->durationH = $durationM;
+        $this->durationM = $durationM;
         $this->elevation = $elevation;
         $this->description = $description;
         $this->userId = $userId;
@@ -36,24 +36,25 @@ class addHikeCheck extends addHikeDb
         }
         if ($this->distanceCheck($this->distance) == false) {
             header("location: addHike");
-            $_SESSION['error'] = "Invalid distance, check it! => " . $this->distance;
+            $_SESSION['error'] = "Invalid distance, check it ! => " . $this->distance;
             exit();
         }
         if ($this->hoursCheck($this->durationH) == false) {
             header("location: addHike");
-            $_SESSION['error'] = "Invalid hours, check it! => " . $this->durationH;
+            $_SESSION['error'] = "Invalid hours, check it ! => " . $this->durationH;
             exit();
         }
         if ($this->minuteCheck($this->durationM) == false) {
             header("location: addHike");
-            $_SESSION['error'] = "Invalid minutes, check it! => " . $this->durationM;
+            $_SESSION['error'] = "Invalid minutes, check it ! => " . $this->durationM;
             exit();
         }
         if ($this->elevationCheck($this->elevation) == false) {
             header("location: addHike");
-            $_SESSION['error'] = "Do you really want to climb this? => " . $this->elevation;
+            $_SESSION['error'] = "Do you really want to climb this ? => " . $this->elevation;
             exit();
         }
+        $this->setHike($this->name, $this->date, $this->distance, $this->durationH, $this->durationM, $this->elevation, $this->description, $this->userId);
     }
     private function emptyInput()
     {
@@ -82,7 +83,7 @@ class addHikeCheck extends addHikeDb
     private function distanceCheck($number)
     {
         $result = null;
-        if (!preg_match("/^[0-9]{1,2,3}([,.][0-9]{1})?$/", $number)) {
+        if (!preg_match("/^\d{1}\d{0,2}((,|\.)\d)?$/", $number)) {
             $result = false;
         } else {
             $result = true;
@@ -92,7 +93,7 @@ class addHikeCheck extends addHikeDb
     private function hoursCheck($number)
     {
         $result = null;
-        if (!preg_match("/^[0-9]{1,2,3}?$/", $number) || empty($number)) {
+        if (!preg_match("/^[0-9]{1,3}$/", $number) || empty($number)) {
             $result = false;
         } else {
             $result = true;
@@ -102,7 +103,7 @@ class addHikeCheck extends addHikeDb
     private function minuteCheck($number)
     {
         $result = null;
-        if (!preg_match("/^[0-5]{0,1}[0-9]{1}?$/", $number) || empty($number)) {
+        if (!preg_match("/^[0-5]{0,1}[0-9]{1}$/", $number) || empty($number)) {
             $result = false;
         } else {
             $result = true;
@@ -112,7 +113,7 @@ class addHikeCheck extends addHikeDb
     private function elevationCheck($number)
     {
         $result = null;
-        if (!preg_match("/^[0-9]{1,2,3,4}?$/", $number)) {
+        if (!preg_match("/^[0-9]{1,4}$/", $number)) {
             $result = false;
         } else {
             $result = true;

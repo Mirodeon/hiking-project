@@ -16,6 +16,5 @@ if (isset($_POST["submit"])) {
     require_once '../app/models/addHikeCheck.php';
     $addHike = new addHikeCheck($name, $date, $distance, $durationH, $durationM, $elevation, $description, $userId);
     $addHike->submitHike();
-    echo "check";
-    /*header("location: welcome");*/
+    header("location: imgForm");
 }

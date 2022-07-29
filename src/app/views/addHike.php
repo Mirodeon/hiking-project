@@ -91,8 +91,9 @@
 
                         </div>
                     </div>
+                    <p class="label is-small has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
                 </form>
-                <p class="label is-small has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
+
             </div>
         </div>
     </div>

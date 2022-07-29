@@ -14,11 +14,13 @@ $routes = [
         '/addHike' => 'app/views/addHike.php',
         '/myHikes' => 'app/views/myHikes.php',
         '/imgForm' => 'app/views/imgForm.php',
-        '/fourHikes' => 'app/views/fourHikes.php'
+        '/fourHikes' => 'app/views/fourHikes.php',
+        '/singleHike' => 'app/views/singleHike.php'
     ],
     'POST' => [
         '/signup' => 'app/controllers/signupContr.php',
         '/login' => 'app/controllers/loginContr.php',
-        '/addHike' => 'app/controllers/addHikesContr.php'
+        '/addHike' => 'app/controllers/addHikesContr.php',
+        '/addImg' => 'app/controllers/addImgContr.php',
     ],
 ];

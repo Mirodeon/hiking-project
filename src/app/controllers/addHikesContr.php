@@ -2,19 +2,20 @@
 session_start();
 if (isset($_POST["submit"])) {
     $name = $_POST["name"];
+    require_once '../app/controllers/currentDate.php';
+    $date = currentDate::getDate();
     $distance = $_POST["distance"];
-    $duration = $_POST["durationH"]."h".$_POST["durationM"];
+    $durationH = $_POST["durationH"];
+    $durationM = $_POST["durationM"];
     $elevation = $_POST["elevation"];
-    $password = $_POST["description"];
+    $description = $_POST["description"];
+    $userId = $_SESSION["user"]["id"];
     require_once '../app/models/MyPDO.php';
     require_once '../app/models/connect.php';
-    /*require_once '../app/models/signup.php';
-    require_once '../app/models/checkSignup.php';*/
-    /*$signup = new SignupCheck($firstname, $lastname, $login, $email, $password, $permission);
-    $signup->signupUser();
-    require_once '../app/models/loginDb.php';
-    require_once '../app/models/checkLogin.php';
-    $login = new LoginContr($login, $password);
-    $login->loginUser();*/
+    require_once '../app/models/addHikeDb.php';
+    require_once '../app/models/addHikeCheck.php';
+    $addHike = new addHikeCheck($name, $date, $distance, $durationH, $durationM, $elevation, $description, $userId);
+    $addHike->submitHike();
+    echo "check";
     /*header("location: welcome");*/
 }

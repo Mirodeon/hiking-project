@@ -17,7 +17,7 @@ while ($hike = $getHikes->fetch()) {
                     <div class="level-item has-text-centered">
                         <div>
                             <p class="heading">Distance</p>
-                            <p><?= $hike['distance']; ?></p>
+                            <p><?= $hike['distance'].'km'; ?></p>
                         </div>
                     </div>
                     <div class="level-item has-text-centered">
@@ -29,7 +29,7 @@ while ($hike = $getHikes->fetch()) {
                     <div class="level-item has-text-centered">
                         <div>
                             <p class="heading">Elevation</p>
-                            <p><?= $hike['elevation']; ?></p>
+                            <p><?= $hike['elevation'].'m'; ?></p>
                         </div>
                     </div>
                 </nav>

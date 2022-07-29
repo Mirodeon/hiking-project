@@ -8,17 +8,29 @@
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 
+<style>
+    .flex {
+        display: flex;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+</style>
+
 <section class="section hike-list">
-    <div class="columns is-centered">
+    <div class="columns is-centered flex">
 
         <?php
         $db = new MyPDO();
         $userID = $_SESSION["user"]["id"];
         
-        $myHikes = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id WHERE users.id ='."$userID");
+        $myHikes = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id WHERE users.id ='."$userID");
 
         while ($hike = $myHikes->fetch()) {
         ?>
+           <a href="singleHike?id=<?= $hike['id']; ?>">
             <div class="column is-one-quarter">
                 <div class="card">
                     <div class="card-image">
@@ -65,6 +77,7 @@
                     </div>
                 </div>
             </div>
+            </a>
         <?php
         }
         ?>

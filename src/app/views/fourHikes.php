@@ -1,7 +1,8 @@
 <?php
-$getHikes = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id ORDER BY hikes.id DESC LIMIT 4');
+$getHikes = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id ORDER BY hikes.id DESC LIMIT 4');
 while ($hike = $getHikes->fetch()) {
 ?>
+<a href="singleHike?id=<?= $hike['id']; ?>">
     <div class="column is-one-quarter">
         <div class="card">
             <div class="card-image">
@@ -17,7 +18,7 @@ while ($hike = $getHikes->fetch()) {
                     <div class="level-item has-text-centered">
                         <div>
                             <p class="heading">Distance</p>
-                            <p><?= $hike['distance']; ?></p>
+                            <p><?= $hike['distance'].'km'; ?></p>
                         </div>
                     </div>
                     <div class="level-item has-text-centered">
@@ -29,7 +30,7 @@ while ($hike = $getHikes->fetch()) {
                     <div class="level-item has-text-centered">
                         <div>
                             <p class="heading">Elevation</p>
-                            <p><?= $hike['elevation']; ?></p>
+                            <p><?= $hike['elevation'].'m'; ?></p>
                         </div>
                     </div>
                 </nav>
@@ -48,6 +49,7 @@ while ($hike = $getHikes->fetch()) {
             </div>
         </div>
     </div>
+</a>
 <?php
 }
 ?>

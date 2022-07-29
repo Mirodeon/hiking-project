@@ -23,6 +23,10 @@ $db = new MyPDO();
   .banner {
     padding: 0;
   }
+  a {
+        text-decoration: none;
+        color: black;
+    }
 </style>
 
 <section class="section banner" style="background-image: url('./img/mountain.jpg'); background-size: cover;">

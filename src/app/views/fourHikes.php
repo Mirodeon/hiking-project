@@ -1,6 +1,15 @@
 <?php
 $getHikes = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id ORDER BY hikes.id DESC LIMIT 4');
+
 while ($hike = $getHikes->fetch()) {
+    
+    $description = $hike['description'];
+    if (strlen($description) > 50){
+        $new_description = substr($description, 0, 120). '...';
+    }else{
+        $new_description = $description;
+    }
+
 ?>
 <a href="singleHike?id=<?= $hike['id']; ?>">
     <div class="column is-one-quarter">
@@ -35,7 +44,7 @@ while ($hike = $getHikes->fetch()) {
                     </div>
                 </nav>
                 <div class="content">
-                    <p class="is-size-6"><?= $hike['description']; ?></p>
+                    <p class="is-size-6"><?= $new_description ?></p>
                     <a href="#">#mountain</a> <a href="#">#lake</a>
                     
                     <div class="media">

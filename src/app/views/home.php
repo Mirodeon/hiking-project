@@ -15,11 +15,9 @@ $db = new MyPDO();
   .hike-list {
     padding-top: 10px;
   }
-
   .hike-name {
     margin-top: -15px;
   }
-
   .banner {
     padding: 0;
   }

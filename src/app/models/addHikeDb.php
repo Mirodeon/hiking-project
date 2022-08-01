@@ -1,18 +1,19 @@
 <?php
 class addHikeDb extends Dbconnect
 {
-    protected function setHike($name, $date, $distance, $durationH, $durationM, $elevation, $description, $userId)
+    protected function setHike($name, $difficulty, $date, $distance, $durationH, $durationM, $elevation, $description, $userId)
     {
         session_start();
         $duration = $durationH . "h" . $durationM;
-        $difficulty = "";
         $url = "";
+        $update = "";
         $db = $this->connect();
-        $q = $db->prepare("INSERT INTO `hikes`(`name`, `difficulty`, `creation_date`, `distance`, `duration`, `elevation`, `description`, `url`, `user_id`) 
-        VALUES (:name, :difficulty, :creation_date, :distance, :duration, :elevation, :description, :url, :user_id)");
+        $q = $db->prepare("INSERT INTO `hikes`(`name`, `difficulty`, `creation_date`, `last_update`, `distance`, `duration`, `elevation`, `description`, `url`, `user_id`) 
+        VALUES (:name, :difficulty, :creation_date, :last_update, :distance, :duration, :elevation, :description, :url, :user_id)");
         $q->bindParam(":name", $name);
         $q->bindParam(":difficulty", $difficulty);
         $q->bindParam(":creation_date", $date);
+        $q->bindParam(":last_update", $update);
         $q->bindParam(":distance", $distance);
         $q->bindParam(":duration", $duration);
         $q->bindParam(':elevation', $elevation);

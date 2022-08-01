@@ -10,11 +10,12 @@ if (isset($_POST["submit"])) {
     $elevation = $_POST["elevation"];
     $description = $_POST["description"];
     $userId = $_SESSION["user"]["id"];
+    $difficulty = $_POST["difficulty"];
     require_once '../app/models/MyPDO.php';
     require_once '../app/models/connect.php';
     require_once '../app/models/addHikeDb.php';
     require_once '../app/models/addHikeCheck.php';
-    $addHike = new addHikeCheck($name, $date, $distance, $durationH, $durationM, $elevation, $description, $userId);
+    $addHike = new addHikeCheck($name, $difficulty, $date, $distance, $durationH, $durationM, $elevation, $description, $userId);
     $addHike->submitHike();
     header("location: imgForm");
 }

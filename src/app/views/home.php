@@ -32,12 +32,15 @@ $db = new MyPDO();
     <div class="columns is-centered">
       <div class="column is-half">
         <p class="has-text-centered is-size-2 has-text-weight-bold has-text-white" style="text-shadow: 1px 1px 3px black;">Find your next hike</p>
+        <form action="" method="post">
         <p class="control has-icons-left">
-          <input class="input is-info is-rounded" type="text" placeholder="Hike search">
+          <input class="input is-info is-rounded" type="search" placeholder="Hike search" name="search">
           <span class="icon is-left">
             <i class="fas fa-search" aria-hidden="true"></i>
           </span>
+          <button class="button is-rounded">Search!</button>
         </p>
+        </form>
       </div>
     </div>
 

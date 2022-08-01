@@ -5,7 +5,7 @@
 <?php $title = "Profile - " . $_SESSION["user"]["login"]; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
-</br>
+
 <div class="hero-body">
 <section class="container" >
     <div class="column is-half is-offset-one-quarter has-text-centered" >

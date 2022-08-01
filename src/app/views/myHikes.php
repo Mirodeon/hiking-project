@@ -10,7 +10,7 @@
 
 <style>
     .flex {
-        display: flex;
+        flex-wrap: wrap;
     }
     a {
         text-decoration: none;
@@ -32,7 +32,7 @@
 
             $description = $hike['description'];
             if (strlen($description) > 50){
-                $new_description = substr($description, 0, 120). '...';
+                $new_description = substr($description, 0, 100). '...';
             }else{
                 $new_description = $description;
             }
@@ -59,7 +59,7 @@
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
-                                    <p class="heading">Duration</p>
+                                    <p class="heading">&nbspDuration&nbsp</p>
                                     <p><?= $hike['duration']; ?></p>
                                 </div>
                             </div>

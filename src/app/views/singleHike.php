@@ -14,10 +14,6 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
     $getid = $_SESSION["hike"]["id"];
     $singleHike = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url, hikes.user_id FROM users INNER JOIN hikes ON users.id = hikes.user_id WHERE hikes.id =' . "$getid");
     $shike = $singleHike->fetch();
-} else if (isset($_SESSION["hike"])) {
-    $getid = $_SESSION["hike"]["id"];
-    $singleHike = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id WHERE hikes.id =' . "$getid");
-    $shike = $singleHike->fetch();
 } else {
     echo "Aucune id trouvée";
 }
@@ -30,7 +26,7 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
         <div class="column is-three-fifths">
             <div class="card">
                 <div class="card-image">
-                    <figure class="image is-4by3">
+                    <figure class="image">
                         <img src="<?= $shike['url']; ?>" alt="Placeholder image">
                     </figure>
                 </div>

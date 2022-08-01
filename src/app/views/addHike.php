@@ -62,11 +62,24 @@
                                             <i class="fa fa-clock-o"></i>
                                         </span>
                                     </div>
+
                                 </div>
+                            </div>
+                            <div class="field">
+                                <label for="elevation" class="label is-small">Difficulty</label>
+                            </div>
+                            <div class="select is-small">
+                                <select>
+                                    <option>Easy</option>
+                                    <option>Normal</option>
+                                    <option>Hard</option>
+                                    <option>Extreme</option>
+                                </select>
                             </div>
                         </div>
 
                         <div class="column">
+
                             <div class="field">
                                 <label for="elevation" class="label is-small">Elevation: m</label>
                             </div>

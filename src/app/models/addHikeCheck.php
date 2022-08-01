@@ -2,6 +2,7 @@
 class addHikeCheck extends addHikeDb
 {
     private $name;
+    private $difficulty;
     private $date;
     private $distance;
     private $durationH;
@@ -10,9 +11,10 @@ class addHikeCheck extends addHikeDb
     private $description;
     private $userId;
 
-    public function __construct($name, $date, $distance, $durationH, $durationM, $elevation, $description, $userId)
+    public function __construct($name, $difficulty, $date, $distance, $durationH, $durationM, $elevation, $description, $userId)
     {
         $this->name = $name;
+        $this->difficulty = $difficulty;
         $this->date = $date;
         $this->distance = $distance;
         $this->durationH = $durationH;
@@ -54,14 +56,14 @@ class addHikeCheck extends addHikeDb
             $_SESSION['error'] = "Do you really want to climb this ? => " . $this->elevation;
             exit();
         }
-        $this->setHike($this->name, $this->date, $this->distance, $this->durationH, $this->durationM, $this->elevation, $this->description, $this->userId);
+        $this->setHike($this->name, $this->difficulty, $this->date, $this->distance, $this->durationH, $this->durationM, $this->elevation, $this->description, $this->userId);
     }
     private function emptyInput()
     {
         $result = null;
         if (
             empty($this->name) || empty($this->date) || empty($this->distance) ||
-            empty($this->elevation) || empty($this->description) ||
+            empty($this->elevation) || empty($this->description) || empty($this->difficulty) ||
             (empty($this->durationH) && empty($this->durationM))
         ) {
             $result = false;

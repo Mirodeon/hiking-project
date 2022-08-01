@@ -14,12 +14,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
     $getid = $_SESSION["hike"]["id"];
     $singleHike = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url, hikes.user_id FROM users INNER JOIN hikes ON users.id = hikes.user_id WHERE hikes.id =' . "$getid");
     $shike = $singleHike->fetch();
-} else if (isset($_SESSION["hike"])) {
-    $getid = $_SESSION["hike"]["id"];
-    $singleHike = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id WHERE hikes.id =' . "$getid");
-    $shike = $singleHike->fetch();
 } else {
-    echo "Aucune id trouvée";
+    header("location: 404");
 }
 ?>
 <?php require "parts/head.php"; ?>
@@ -43,7 +39,7 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
                 <div class="level-item has-text-centered">
                     <div>
                         <p class="heading">Distance</p>
-                        <p><?= $shike['distance']; ?></p>
+                        <p><?= $shike['distance'] . "km"; ?></p>
                     </div>
                 </div>
                 <div class="level-item has-text-centered">
@@ -55,7 +51,7 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
                 <div class="level-item has-text-centered">
                     <div>
                         <p class="heading">Elevation</p>
-                        <p><?= $shike['elevation']; ?></p>
+                        <p><?= $shike['elevation'] . "m"; ?></p>
                     </div>
                 </div>
             </nav>
@@ -74,4 +70,5 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
         </div>
     </div>
 </div>
+<?php unset($_SESSION["hike"]); ?>
 <?php include "footer.php"; ?>

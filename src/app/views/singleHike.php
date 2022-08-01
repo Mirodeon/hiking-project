@@ -67,6 +67,10 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
                     </div>
                 </div>
             </div>
+            <div class="has-text-centered">
+            <button class="button is-primary">Edit</button>
+            <button class="button is-danger">Delete</button>
+            </div>
         </div>
     </div>
 </div>

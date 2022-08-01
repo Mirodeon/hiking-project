@@ -4,13 +4,14 @@
 } else {
     $title = "Hike";
 } ?>
-<?php require "parts/head.php"; ?>
-<!-- <?php echo $_SESSION["hike"]["id"]; ?><br> -->
-<?php include 'header.php'; ?>
 <?php
 $db = new MyPDO();
 if (isset($_GET['id']) and !empty($_GET['id'])) {
     $getid = $_GET['id'];
+    $singleHike = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id WHERE hikes.id =' . "$getid");
+    $shike = $singleHike->fetch();
+} else if (isset($_SESSION["hike"])) {
+    $getid = $_SESSION["hike"]["id"];
     $singleHike = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id WHERE hikes.id =' . "$getid");
     $shike = $singleHike->fetch();
 } else {
@@ -18,6 +19,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
 }
 
 ?>
+<?php require "parts/head.php"; ?>
+<?php include 'header.php'; ?>
 </br>
 <div class="card-content">
     <div class="columns is-centered">

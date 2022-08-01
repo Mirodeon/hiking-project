@@ -7,12 +7,15 @@
 <?php if (
     ($_SESSION["user"]["id"] != $_SESSION["editHike"]["userId"] &&
         $_SESSION["user"]["permission"] != "administrateur")
-    || !isset($_POST["edit"])
+    || (!isset($_POST["edit"]) && !isset($_SESSION["editHike"]["hikeId"]))
 ) {
     unset($_SESSION["editHike"]);
     $title = "Add a Hike - " . $_SESSION["user"]["login"];
 } else {
-    $title = "Edit a Hike - " . $_SESSION["user"]["login"];
+    $title = "Edit a Hike - " . $_SESSION["user"]["login"] . $_SESSION["editHike"]["difficulty"];
+    if (isset($_POST["edit"])) {
+        $_SESSION["editHike"]["hikeId"] = $_POST["edit"];
+    }
 } ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
@@ -91,10 +94,18 @@
                             </div>
                             <div class="select is-small">
                                 <select name="difficulty">
-                                    <option value="Easy">Easy</option>
-                                    <option value="Normal">Normal</option>
-                                    <option value="Hard">Hard</option>
-                                    <option value="Extreme">Extreme</option>
+                                    <option value="Easy" <?php if ($_SESSION['editHike']['difficulty'] == 'Easy') {
+                                                                echo "selected='selected'";
+                                                            } ?>>Easy</option>
+                                    <option value="Normal" <?php if ($_SESSION['editHike']['difficulty'] == 'Normal') {
+                                                                echo "selected='selected'";
+                                                            } ?>>Normal</option>
+                                    <option value="Hard" <?php if ($_SESSION['editHike']['difficulty'] == 'Hard') {
+                                                                echo "selected='selected'";
+                                                            } ?>>Hard</option>
+                                    <option value="Extreme" <?php if ($_SESSION['editHike']['difficulty'] == 'Extreme') {
+                                                                echo "selected='selected'";
+                                                            } ?>>Extreme</option>
                                 </select>
                             </div>
                         </div>
@@ -129,10 +140,10 @@
                                                                                                         } else {
                                                                                                             echo 'value="addHike"';
                                                                                                         } ?>><?php if (isset($_SESSION['editHike'])) {
-                                                                                                                                                echo "Edit a Hike";
-                                                                                                                                            } else {
-                                                                                                                                                echo "Add a Hike";
-                                                                                                                                            } ?></button>
+                                                                                                                    echo "Edit a Hike";
+                                                                                                                } else {
+                                                                                                                    echo "Add a Hike";
+                                                                                                                } ?></button>
                             </div>
 
                         </div>

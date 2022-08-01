@@ -31,7 +31,7 @@
         while ($hike = $myHikes->fetch()) {
 
             $description = $hike['description'];
-            if (strlen($description) > 50){
+            if (strlen($description) > 100){
                 $new_description = substr($description, 0, 100). '...';
             }else{
                 $new_description = $description;

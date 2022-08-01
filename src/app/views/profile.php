@@ -37,8 +37,8 @@
                         email: <?php echo $_SESSION["user"]["email"]; ?>
                     </div></br>
                     <button class="button is-light">Update</button>
-                    <button class="button">Users manager</button>
-                    <button class="button">Hikes manager</button>
+                    <a href="userManage"><button class="button">Users manager</button></a>
+                    <a href="hikeManage"><button class="button">Hikes manager</button></a>
                 </div></br>
             </article>
         </div>

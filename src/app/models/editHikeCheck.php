@@ -1,31 +1,42 @@
 <?php
-class addHikeCheck extends addHikeDb
+class editHikeCheck extends editHikeDb
 {
     private $name;
     private $difficulty;
-    private $date;
+    private $update;
     private $distance;
     private $durationH;
     private $durationM;
     private $elevation;
     private $description;
     private $userId;
+    private $hikeId;
 
-    public function __construct($name, $difficulty, $date, $distance, $durationH, $durationM, $elevation, $description, $userId)
+    public function __construct($name, $difficulty, $update, $distance, $durationH, $durationM, $elevation, $description, $userId, $hikeId)
     {
         $this->name = $name;
         $this->difficulty = $difficulty;
-        $this->date = $date;
+        $this->update = $update;
         $this->distance = $distance;
         $this->durationH = $durationH;
         $this->durationM = $durationM;
         $this->elevation = $elevation;
         $this->description = $description;
         $this->userId = $userId;
+        $this->hikeId = $hikeId;
     }
-    public function submitHike()
+    public function submitEditHike()
     {
         session_start();
+        $_SESSION["editHike"]["name"] = $this->name;
+        $_SESSION["editHike"]["difficulty"] = $this->difficulty;
+        $_SESSION["editHike"]["distance"] = $this->distance;
+        $_SESSION["editHike"]["durationH"] = $this->durationH;
+        $_SESSION["editHike"]["durationM"] = $this->durationM;
+        $_SESSION["editHike"]["elevation"] = $this->elevation;
+        $_SESSION["editHike"]["description"] = $this->description;
+        $_SESSION["editHike"]["userId"] = $this->userId;
+        $_SESSION["editHike"]["hikeId"] = $this->hikeId;
         if ($this->emptyInput() == false) {
             header("location: addHike");
             $_SESSION['error'] = "Form incomplete";
@@ -41,12 +52,12 @@ class addHikeCheck extends addHikeDb
             $_SESSION['error'] = "Invalid distance, check it ! => " . $this->distance;
             exit();
         }
-        if ($this->hoursCheck($this->durationH, $this->durationM) == false) {
+        if ($this->hoursCheck($this->durationH) == false) {
             header("location: addHike");
             $_SESSION['error'] = "Invalid hours, check it ! => " . $this->durationH;
             exit();
         }
-        if ($this->minuteCheck($this->durationM, $this->durationH) == false) {
+        if ($this->minuteCheck($this->durationM) == false) {
             header("location: addHike");
             $_SESSION['error'] = "Invalid minutes, check it ! => " . $this->durationM;
             exit();
@@ -56,15 +67,16 @@ class addHikeCheck extends addHikeDb
             $_SESSION['error'] = "Do you really want to climb this ? => " . $this->elevation;
             exit();
         }
-        $this->setHike($this->name, $this->difficulty, $this->date, $this->distance, $this->durationH, $this->durationM, $this->elevation, $this->description, $this->userId);
+        unset($_SESSION["editHike"]);
+        $this->editHike($this->name, $this->difficulty, $this->update, $this->distance, $this->durationH, $this->durationM, $this->elevation, $this->description, $this->userId, $this->hikeId);
     }
     private function emptyInput()
     {
         $result = null;
         if (
-            empty($this->name) || empty($this->date) || empty($this->distance) ||
+            empty($this->name) || empty($this->update) || empty($this->distance) ||
             empty($this->elevation) || empty($this->description) || empty($this->difficulty) ||
-            (empty($this->durationH) && empty($this->durationM))
+            empty($this->hikeId) || (empty($this->durationH) && empty($this->durationM))
         ) {
             $result = false;
         } else {
@@ -92,20 +104,20 @@ class addHikeCheck extends addHikeDb
         }
         return $result;
     }
-    private function hoursCheck($numberH, $numberM)
+    private function hoursCheck($number)
     {
         $result = null;
-        if (!preg_match("/^[0-9]{1,3}$/", $numberH) || (empty($numberH) && (empty($numberM)))) {
+        if (!preg_match("/^[0-9]{1,3}$/", $number) || empty($number)) {
             $result = false;
         } else {
             $result = true;
         }
         return $result;
     }
-    private function minuteCheck($numberM, $numberH)
+    private function minuteCheck($number)
     {
         $result = null;
-        if (!preg_match("/^[0-5]{0,1}[0-9]{1}$/", $numberM) || (empty($numberH) && (empty($numberM)))){
+        if (!preg_match("/^[0-5]{0,1}[0-9]{1}$/", $number) || empty($number)) {
             $result = false;
         } else {
             $result = true;

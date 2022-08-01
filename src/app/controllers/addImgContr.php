@@ -10,6 +10,5 @@ if (isset($_POST["submit"])) {
     require_once '../app/models/addImgCheck.php';
     $addHike = new addImgCheck($urlImg, $idHike, $userId);
     $addHike->submitImg();
-    echo "check";
     header("location: singleHike");
 }

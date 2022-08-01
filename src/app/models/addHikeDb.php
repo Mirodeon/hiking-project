@@ -5,7 +5,7 @@ class addHikeDb extends Dbconnect
     {
         session_start();
         $duration = $durationH . "h" . $durationM;
-        $url = "";
+        $url = "./img/noImage.png";
         $update = "";
         $db = $this->connect();
         $q = $db->prepare("INSERT INTO `hikes`(`name`, `difficulty`, `creation_date`, `last_update`, `distance`, `duration`, `elevation`, `description`, `url`, `user_id`) 

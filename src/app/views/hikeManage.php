@@ -21,11 +21,11 @@ $getHike = $db->query('SELECT * FROM hikes ORDER BY id');
         justify-content: center;
     }
 </style>
-<div class="hero-body">
+<div class="hero-body" style="background-image: url('./img/man-rand.jpg'); background-size: cover;">
     <section class="container flex center">
         <div>
             <article class="panel is-primary">
-                <p class="panel-heading has-text-centered">Hikes management</p></br>
+                <p class="panel-heading has-text-centered">Hikes management</p>
                 <table class="table">
                     <thead>
                         <tr>
@@ -36,7 +36,7 @@ $getHike = $db->query('SELECT * FROM hikes ORDER BY id');
                             <th>DISTANCE</th>
                             <th>DURATION</th>
                             <th>ELEVATION</th>
-                            <th>DESCRIPTION</th>
+                            <th>DESCRIPTION</th>                            
                         </tr>
                     </thead>
                     <tbody>

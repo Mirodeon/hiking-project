@@ -7,39 +7,41 @@
 <?php include 'header.php'; ?>
 
 <div class="hero-body">
-<section class="container" >
-    <div class="column is-half is-offset-one-quarter has-text-centered" >
-        <article class="panel is-primary" >
-            <p class="panel-heading">User profile</p></br>
-            <div class="blabla">
-                <div class="field">
-                    <span class="icon is-small is-left">
-                        <i class="fa fa-user-o"></i>
-                    </span>
-                    firstname: <?php echo $_SESSION["user"]["firstname"]; ?>
-                </div>
-                <div class="field">
-                    <span class="icon is-small is-left">
-                        <i class="fa fa-user-o"></i>
-                    </span>
-                    lastname: <?php echo $_SESSION["user"]["lastname"]; ?>
-                </div>
-                <div class="field">
-                    <span class="icon is-small is-left">
-                        <i class="fa fa-sign-in"></i>
-                    </span>
-                    login: <?php echo $_SESSION["user"]["login"]; ?>
-                </div>
-                <div class="field">
-                    <span class="icon is-small is-left">
-                        <i class="fa fa-envelope-o"></i>
-                    </span>
-                    email: <?php echo $_SESSION["user"]["email"]; ?>
+    <section class="container">
+        <div class="column is-half is-offset-one-quarter has-text-centered">
+            <article class="panel is-primary">
+                <p class="panel-heading">User profile</p></br>
+                <div class="blabla">
+                    <div class="field">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-user-o"></i>
+                        </span>
+                        firstname: <?php echo $_SESSION["user"]["firstname"]; ?>
+                    </div>
+                    <div class="field">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-user-o"></i>
+                        </span>
+                        lastname: <?php echo $_SESSION["user"]["lastname"]; ?>
+                    </div>
+                    <div class="field">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-sign-in"></i>
+                        </span>
+                        login: <?php echo $_SESSION["user"]["login"]; ?>
+                    </div>
+                    <div class="field">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope-o"></i>
+                        </span>
+                        email: <?php echo $_SESSION["user"]["email"]; ?>
+                    </div></br>
+                    <button class="button is-light">Update</button>
+                    <button class="button">Users manager</button>
+                    <button class="button">Hikes manager</button>
                 </div></br>
-                <button class="button is-light">Update</button>
-            </div></br>            
-        </article>
-    </div>
-</section>
-</br>
-<?php include "footer.php"; ?>
+            </article>
+        </div>
+    </section>
+    </br>
+    <?php include "footer.php"; ?>

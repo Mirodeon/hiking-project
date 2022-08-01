@@ -22,11 +22,11 @@ $getUsers = $db->query('SELECT * FROM users ORDER BY id');
         justify-content: center;
     }
 </style>
-<div class="hero-body ">
+<div class="hero-body" style="background-image: url('./img/man-rand.jpg'); background-size: cover;">
     <section class="container flex center">
         <div>
             <article class="panel is-link">
-                <p class="panel-heading has-text-centered">User management</p></br>
+                <p class="panel-heading has-text-centered">User management</p>
                 <table class="table">
                     <thead>
                         <tr>

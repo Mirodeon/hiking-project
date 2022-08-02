@@ -19,5 +19,6 @@ if ($_SESSION["user"]["id"] == $shike['user_id'] || $_SESSION["user"]["permissio
         </form>
         <form method="post" class="column is-left has-text-left" action="delHike">
             <button class="button is-danger" type="submit" name="delete" value="<?= $shike['id']; ?>">Delete</button>
+        </form>
     </div>
 <?php }; ?>

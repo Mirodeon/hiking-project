@@ -18,7 +18,10 @@ $routes = [
         '/singleHike' => 'app/views/singleHike.php',
         '/allHikes' => 'app/views/allHikes.php',
         '/userManage' => 'app/views/userManage.php',
-        '/hikeManage' => 'app/views/hikeManage.php'
+        '/hikeManage' => 'app/views/hikeManage.php',
+        '/deleteUser' => 'app/views/deleteUser.php',
+        '/deleteHike' => 'app/views/deleteHike.php',
+        '/sendMail' => 'app/views/sendMail.php'
     ],
     'POST' => [
         '/signup' => 'app/controllers/signupContr.php',

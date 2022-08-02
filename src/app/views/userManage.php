@@ -2,7 +2,7 @@
 <?php if (!isset($_SESSION["user"])) {
     header("location: home");
 } ?>
-<?php $title = "Profile - " . $_SESSION["user"]["login"]; ?>
+<?php $title = "User manager - " . $_SESSION["user"]["login"]; ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 
@@ -51,7 +51,7 @@ $getUsers = $db->query('SELECT * FROM users ORDER BY id');
                                 <td><?= $users['email']; ?></td>
                                 <td><?= $users['permission']; ?></td>
                                 <td><button class="button is-succes is-light is-small">Update</button></td>
-                                <td><button class="button is-danger is-light is-small">Delete</button></td>
+                                <td><a href="deleteUser?id=<?= $users['id']; ?>"><button class="button is-danger is-light is-small">Delete</button></a></td>
                             </tr>
                         <?php } ?>
                     </tbody>

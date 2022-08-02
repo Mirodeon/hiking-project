@@ -22,7 +22,7 @@
                         </span>
                     </div>
                     <div>
-                        <img class="imgPreview" alt="image preview" style="width: 200px; visibility: hidden; display: block; margin: 0 auto;" id="img_prev">
+                        <img src="img/noImage.png" class="imgPreview" alt="image preview" style="width: 200px; visibility: hidden; display: block; margin: 0 auto;" id="img_prev">
                     </div>
                     </br>
                     <div style="display: flex; justify-content: center; gap: 10px;">

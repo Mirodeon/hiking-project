@@ -22,12 +22,13 @@
                         </span>
                     </div>
                     <div>
-                        <img src="img/noImage.png" class="imgPreview" alt="image preview" style="width: 200px; visibility: hidden; display: block; margin: 0 auto;" id="img_prev">
+                        <img class="imgPreview" alt="image preview" style="width: 200px; visibility: hidden; display: block; margin: 0 auto;" id="img_prev">
                     </div>
                     </br>
                     <div style="display: flex; justify-content: center; gap: 10px;">
                         <div class="button is-light is-small btnPreview" id="btn">Preview</div>
                         <button class="button is-success is-small" type="submit" name="submit" value="confirmImg">Confirm</button>
+                        <button class="button is-success is-small" type="submit" name="skip" value="skipImg">Skip</button>
                     </div>
                     <p class="label is-small has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
                 </form>
@@ -41,8 +42,10 @@
         previewBtn.addEventListener('click', e => {
             input = document.querySelector('.imageReader');
             preview = document.querySelector('.imgPreview');
-            preview.src = input.value;
-            preview.style.visibility = "visible";
+            if (input.value != "") {
+                preview.src = input.value;
+                preview.style.visibility = "visible";
+            };
         });
     }
     setBtnPreview();

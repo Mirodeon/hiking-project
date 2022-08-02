@@ -12,3 +12,6 @@ if (isset($_POST["submit"])) {
     $addHike->submitImg();
     header("location: singleHike");
 }
+if (isset($_POST["skip"])) {
+    header("location: singleHike");
+}

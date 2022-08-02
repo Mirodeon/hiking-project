@@ -26,7 +26,6 @@ class editHikeDb extends Dbconnect
         }
         $_SESSION["hike"] = [
             "id" => $hikeId,
-            "edit" => $userId
         ];
     }
 }

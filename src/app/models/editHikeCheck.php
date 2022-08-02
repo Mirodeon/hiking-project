@@ -104,20 +104,20 @@ class editHikeCheck extends editHikeDb
         }
         return $result;
     }
-    private function hoursCheck($number)
+    private function hoursCheck($numberH)
     {
         $result = null;
-        if (!preg_match("/^[0-9]{1,3}$/", $number) || empty($number)) {
+        if (!preg_match("/^[0-9]{1,3}$/", $numberH) && !empty($numberH)) {
             $result = false;
         } else {
             $result = true;
         }
         return $result;
     }
-    private function minuteCheck($number)
+    private function minuteCheck($numberM)
     {
         $result = null;
-        if (!preg_match("/^[0-5]{0,1}[0-9]{1}$/", $number) || empty($number)) {
+        if (!preg_match("/^[0-5]{0,1}[0-9]{1}$/", $numberM) && !empty($numberM)) {
             $result = false;
         } else {
             $result = true;

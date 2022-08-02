@@ -12,7 +12,7 @@
     unset($_SESSION["editHike"]);
     $title = "Add a Hike - " . $_SESSION["user"]["login"];
 } else {
-    $title = "Edit a Hike - " . $_SESSION["user"]["login"] . $_SESSION["editHike"]["difficulty"];
+    $title = "Edit a Hike - " . $_SESSION["user"]["login"];
     if (isset($_POST["edit"])) {
         $_SESSION["editHike"]["hikeId"] = $_POST["edit"];
     }

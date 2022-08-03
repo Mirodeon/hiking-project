@@ -13,6 +13,7 @@
                 <div class="block">
                     <p class="has-text-centered">Error 404</p>
                     <p class="has-text-centered">Page not found</p>
+                    <p class="label has-text-danger has-text-centered"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
                 </div>
                 <div class="image is-64x64 is-clickable block is-centered" style="margin: 0 auto;">
                     <a href="home" title="home">
@@ -23,4 +24,5 @@
         </div>
     </div>
 </div>
+<?php unset($_SESSION["error"]); ?>
 <?php include "footer.php"; ?>

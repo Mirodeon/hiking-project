@@ -25,11 +25,11 @@ class addImgCheck extends addImgDb
             $_SESSION['error'] = "User not logged in";
             exit();
         }
-        /*if ($this->invalidUrl() == false) {
+        if ($this->invalidUrl() == false) {
             header("location: imgForm");
             $_SESSION['error'] = "Invalid URL";
             exit();
-        }*/
+        }
         $this->setImg($this->urlImg, $this->idHike);
     }
 
@@ -57,7 +57,7 @@ class addImgCheck extends addImgDb
     private function invalidUrl()
     {
         $result = null;
-        if (!preg_match("/^[\w\-]+\.(jpg|png|gif|jpeg)$/", $this->urlImg)) {
+        if (!preg_match("/^(http(s?):)([\/|.|\w|\s|-])*.([.](jpg|gif|png))$/", $this->urlImg)) {
             $result = false;
         } else {
             $result = true;

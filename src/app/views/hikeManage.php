@@ -1,6 +1,7 @@
 <?php session_start(); ?>
-<?php if (!isset($_SESSION["user"])) {
-    header("location: home");
+<?php if ($_SESSION["user"]["permission"] != "administrateur") {
+    $_SESSION['error'] = "Proper user required";
+    header("location: 404");
 } ?>
 <?php $title = "Hike manager - " . $_SESSION["user"]["login"]; ?>
 <?php require "parts/head.php"; ?>
@@ -60,6 +61,7 @@ $getHike = $db->query('SELECT * FROM hikes ORDER BY id');
                                 <td><?= $hike['duration']; ?></td>
                                 <td><?= $hike['elevation']; ?></td>
                                 <td><?= $new_description; ?></td>
+                                <td><a href="singleHike?id=<?= $hike['id']; ?>"><button class="button is-light is-small">Update</button></a></td>
                                 <td><a href="deleteHike?id=<?= $hike['id']; ?>"><button class="button is-danger is-light is-small">Delete</button></a></td>
                             </tr>
                         <?php } ?>

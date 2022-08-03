@@ -1,6 +1,7 @@
 <?php session_start(); ?>
-<?php if (!isset($_SESSION["user"])) {
-    header("location: home");
+<?php if ($_SESSION["user"]["permission"] != "administrateur") {
+    $_SESSION['error'] = "Proper user required";
+    header("location: 404");
 } ?>
 <?php $title = "User manager - " . $_SESSION["user"]["login"]; ?>
 <?php require "parts/head.php"; ?>

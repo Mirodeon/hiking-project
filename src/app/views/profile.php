@@ -36,12 +36,15 @@
                         </span>
                         email: <?php echo $_SESSION["user"]["email"]; ?>
                     </div></br>
-                    <button class="button is-light">Update</button>
-                    <a href="userManage"><button class="button">Users manager</button></a>
-                    <a href="hikeManage"><button class="button">Hikes manager</button></a>
+                    <form method="post" action="editProfile">
+                    <button class="button is-light" type="submit" name="edit" value="<?= $_SESSION['user']['id']; ?>">Update</button>
+                    <p class="label is-small has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
+                    </form>
+                    <?php include '../app/controllers/managementBtn.php'; ?>
                 </div></br>
             </article>
         </div>
     </section>
     </br>
+    <?php unset($_SESSION["error"]); ?>
     <?php include "footer.php"; ?>

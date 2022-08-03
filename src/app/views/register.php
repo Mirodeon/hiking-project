@@ -4,26 +4,6 @@
 } ?>
 <?php $title = "Register"; ?>
 
-<?php
-     $to      = 'luuduc34@hotmail.com';
-     $subject = 'Thanks for your subscription';
-     $message = '<html>
-     <head>
-      <title>Subscription confirmation</title>
-     </head>
-     <body>
-     <img src="./img/mail_image.jpg" alt="welcome mail image">
-      <h1>hello there!</h1></br>
-      <h3>Thanks for signing up as a new member.</h3>
-      <h2>We hope you\'ll enjoy your visit!</h2>
-     </body>
-    </html>';
-     $headers = 'From: webmaster@elderberry.be' . "\r\n" .
-     'Reply-To: webmaster@elderberry.be' . "\r\n" .
-     'X-Mailer: PHP/' . phpversion();
-     mail($to, $subject, $message, $headers);     
- ?>
-
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 <div class="hero is-primary">
@@ -59,7 +39,7 @@
                         </span>
                     </div>
                     <div class="field">
-                        <label for="login" class="label is-small">Login</label>
+                        <label for="login" class="label is-small">Nickname</label>
                     </div>
                     <div class="control has-icons-left">
                         <input type="text" class="input is-small" placeholder="Your login" name="login" autocomplete="off">

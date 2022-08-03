@@ -10,6 +10,13 @@
 <div class="hero-body">
     <section class="container flex center">
         <div class="columns is-centered">
+            <div class="column is-half">
+                <article class="panel is-success">
+                    <p class="panel-heading has-text-centered">Contact us</p>
+                    <p>ABOUT US
+                        Our goal is to bring you closer to places and people that would otherwise seem foreign by providing guides to studying languages, understanding culture, and living in unfamiliar places.</p>
+                </article>
+            </div>
             <article class="panel is-success">
                 <p class="panel-heading has-text-centered">Contact us</p>
                 <div class="column" style="background-image: url('./img/mail_image.jpg'); background-repeat: no-repeat; background-size:cover; height:150px"></div>
@@ -62,7 +69,7 @@
                         <div class="field">
                             <label class="label">Message</label>
                             <div class="control">
-                                <textarea class="textarea" placeholder="Your message" name="message"></textarea>
+                                <textarea class="textarea" placeholder="Your message" name="message" spellcheck="false"></textarea>
                             </div>
                         </div>
                         <div class="field is-grouped">
@@ -75,7 +82,6 @@
                         </div>
                     </form>
                 </div>
-
             </article>
         </div>
     </section>

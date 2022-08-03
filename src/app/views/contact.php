@@ -22,8 +22,14 @@
                         <p>For millions of people, Elderberry is the key to the great outdoors. From intrepid explorers and experienced off-roaders, to those who just bought their first road bike, our technology allows everybody to better find, plan and live authentic outdoor experiences, we built Elderberry for this very reason</p><br>
                         <article class="message is-success">
                             <div class="message-body">
-                                <p><em>"I believe that every day spent outside exploring is a valuable day; more valuable than anything you can buy. At the end of your life you will look back not on the things you owned but on the things you experienced—we help people experience more"</em></p>
+                                <p><em>"I believe that every day spent outside exploring is a valuable day; more valuable than anything you can buy"</em></p>
                                 <p style="text-align: right;">Mehdi HABARU Co-founder, Web developper</p>
+                            </div>
+                        </article>
+                        <article class="message is-link">
+                            <div class="message-body">
+                                <p><em>"At the end of your life you will look back not on the things you owned but on the things you experienced"</em></p>
+                                <p style="text-align: right;">Duc LUU Co-founder, Web developper</p>
                             </div>
                         </article>
                     </div>

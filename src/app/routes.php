@@ -30,6 +30,7 @@ $routes = [
         '/addImg' => 'app/controllers/addImgContr.php',
         '/addHike' => 'app/views/addHike.php',
         '/delHike' => 'app/controllers/delHikeContr.php',
-        '/editHikeContr' => 'app/controllers/editHikeContr.php'
+        '/editHikeContr' => 'app/controllers/editHikeContr.php',
+        '/sendContact' => 'app/controllers/sendContact.php'
     ],
 ];

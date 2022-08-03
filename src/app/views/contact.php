@@ -14,64 +14,66 @@
                 <p class="panel-heading has-text-centered">Contact us</p>
                 <div class="column" style="background-image: url('./img/mail_image.jpg'); background-repeat: no-repeat; background-size:cover; height:150px"></div>
                 <div class="column">
-                    <div class="field">
-                        <label class="label">Firstname</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="text" placeholder="Firstname">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">Lastname</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="text" placeholder="Lastname">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">Email</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input class="input" type="email" placeholder="Email input">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">Subject</label>
-                        <div class="control">
-                            <div class="select">
-                                <select>
-                                    <option>Select a subject</option>
-                                    <option>Users</option>
-                                    <option>Hikes</option>
-                                    <option>Website</option>
-                                </select>
+                    <form action="sendContact" method="post">
+                        <div class="field">
+                            <label class="label">Firstname</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input" type="text" placeholder="Firstname" name="firstname">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="field">
-                        <label class="label">Message</label>
-                        <div class="control">
-                            <textarea class="textarea" placeholder="Your message"></textarea>
+                        <div class="field">
+                            <label class="label">Lastname</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input" type="text" placeholder="Lastname" name="lastname">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field is-grouped">
-                        <div class="control">
-                            <button class="button is-link">Submit</button>
+
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input" type="email" placeholder="Email adress" name="email" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
                         </div>
-                        <div class="control">
-                            <button class="button is-link is-light">Cancel</button>
+
+                        <div class="field">
+                            <label class="label">Subject</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="subject">
+                                        <option>Select a subject</option>
+                                        <option value="User">Users</option>
+                                        <option value="Hike">Hikes</option>
+                                        <option value="Website">Website</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Your message" name="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link" type="submit">Submit</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link is-light" type="reset">Reset</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
             </article>

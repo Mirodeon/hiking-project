@@ -51,7 +51,7 @@ class Signup extends Dbconnect
             //Recipients
             $mail->setFrom('elderberryhiking@gmail.com', 'Elderberry Hiking');      // From
             $mail->addAddress($email, $lastname.", ".$firstname);                   // Destination
-            $mail->addBCC('luuduc34@hotmail.com');                                  // Blind carbon copy
+            $mail->addBCC('elderberryhiking@gmail.com');                            // Blind carbon copy
             //Content
             $mail->isHTML(true);            // Set email format to HTML
             $mail->Subject = 'Thanks for your subscription';
@@ -60,10 +60,10 @@ class Signup extends Dbconnect
          <title>Subscription confirmation</title>
         </head>
         <body>
-        <img src="https://luuduc34.github.io/weather-app/img/mail_image.jpg" alt="welcome mail image">
-         <h1>hello there!</h1>
-         <h3>Thanks for signing up as a new member.</h3>
-         <h2>We hope you\'ll enjoy your visit!</h2>
+        <img src="https://luuduc34.github.io/weather-app/img/mail_image.jpg" alt="Elderberry mail image">
+         <h2>hello there!</h2>
+         <h4>Thanks for signing up as a new member.</h4>
+         <h3>We hope you\'ll enjoy your visit!</h3>
         </body>
         </html>';
 

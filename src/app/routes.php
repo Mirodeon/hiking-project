@@ -33,6 +33,5 @@ $routes = [
         '/editHikeContr' => 'app/controllers/editHikeContr.php',
         '/editProfile' => 'app/views/register.php',
         '/editProfileContr' => 'app/controllers/editProfileContr.php'
-
     ],
 ];

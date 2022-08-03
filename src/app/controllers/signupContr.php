@@ -17,7 +17,7 @@ if (isset($_POST["submit"])) {
     require_once '../app/models/checkLogin.php';
     $login = new LoginContr($login, $password);
     $login->loginUser();
-
+/*
     $to      = 'luuduc34@hotmail.com';
     $subject = 'Thanks for your subscription';
     $message = '
@@ -36,6 +36,6 @@ if (isset($_POST["submit"])) {
         'Reply-To: webmaster@elderberry.be' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers);
-
+*/
     header("location: welcome");
 }

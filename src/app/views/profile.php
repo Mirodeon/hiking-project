@@ -38,6 +38,7 @@
                     </div></br>
                     <form method="post" action="editProfile">
                     <button class="button is-light" type="submit" name="edit" value="<?= $_SESSION['user']['id']; ?>">Update</button>
+                    <p class="label is-small has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
                     </form>
                     <?php include '../app/controllers/managementBtn.php'; ?>
                 </div></br>
@@ -45,4 +46,5 @@
         </div>
     </section>
     </br>
+    <?php unset($_SESSION["error"]); ?>
     <?php include "footer.php"; ?>

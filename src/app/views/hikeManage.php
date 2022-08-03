@@ -61,7 +61,7 @@ $getHike = $db->query('SELECT * FROM hikes ORDER BY id');
                                 <td><?= $hike['duration']; ?></td>
                                 <td><?= $hike['elevation']; ?></td>
                                 <td><?= $new_description; ?></td>
-                                <td><button class="button is-light is-small">Update</button></td>
+                                <td><a href="singleHike?id=<?= $hike['id']; ?>"><button class="button is-light is-small">Update</button></a></td>
                                 <td><a href="deleteHike?id=<?= $hike['id']; ?>"><button class="button is-danger is-light is-small">Delete</button></a></td>
                             </tr>
                         <?php } ?>

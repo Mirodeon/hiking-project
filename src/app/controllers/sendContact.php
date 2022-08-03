@@ -22,7 +22,8 @@ if (isset($_POST['message'])) {
 <p><b>Firstname : </b>' . $_POST['firstname'] . '<br>
 <p><b>Lastname : </b>' . $_POST['lastname'] . '<br>
 <p><b>Subject : </b>' . $_POST['subject'] . '<br>
-<p><b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
+<p><b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>
+<img src="https://luuduc34.github.io/weather-app/img/mail_image.jpg" alt="Elderberry mail image">';
 
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
@@ -48,7 +49,7 @@ if (isset($_POST['message'])) {
         $mail->Body    = $message;
 
         $mail->send();
-        echo 'Your message has been sent';
+        header("location: contact");
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }

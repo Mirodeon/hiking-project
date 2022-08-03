@@ -59,11 +59,11 @@ class Signup extends Dbconnect
         <head>
          <title>Subscription confirmation</title>
         </head>
-        <body>
-        <img src="https://luuduc34.github.io/weather-app/img/mail_image.jpg" alt="Elderberry mail image">
-         <h2>hello there!</h2>
+        <body>        
+         <h2>Hello  ' . $firstname .' '. $lastname . ' !</h2>
          <h4>Thanks for signing up as a new member.</h4>
          <h3>We hope you\'ll enjoy your visit!</h3>
+         <img src="https://luuduc34.github.io/weather-app/img/mail_image.jpg" alt="Elderberry mail image">
         </body>
         </html>';
 

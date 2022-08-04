@@ -1,4 +1,11 @@
 <?php $title = "All Hikes"; ?>
+<<<<<<< HEAD
+<?php require "app/views/parts/head.php"; ?>
+<?php include 'app/views/header.php'; ?>
+<?php include 'app/views/parts/styleCard.php'; ?>
+<section class="section hike-list">
+    <div class="columns is-centered flex">
+=======
 
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
@@ -127,6 +134,7 @@
 
 <section class="section hike-list has-background-light">
     <div class="columns is-centered flex ">
+>>>>>>> duc
 
         <?php
         $db = new MyPDO();
@@ -134,57 +142,10 @@
         $myHikes = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id ORDER BY hikes.id DESC');
 
         while ($hike = $myHikes->fetch()) {
-        ?>
-
-            <div class="container">
-                <div class="content">
-                    <a href="singleHike?id=<?= $hike['id']; ?>">
-                        <div class="content-overlay"></div>
-                        <img class="content-image" src="<?= $hike['url']; ?>">
-                        
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title is-size-4"><?= $hike['name']; ?></h3>
-                            <p class="is-size-7 has-text-centered">Difficulty : <?= $hike['difficulty']; ?></p>
-                            <nav class="level">
-                                <div class="level-item has-text-centered">
-                                    <div>
-                                        <p class="heading">Distance</p>
-                                        <p><?= $hike['distance'] . 'km'; ?></p>
-                                    </div>
-                                    <div>
-                                        <p class="heading">&nbsp&nbsp  Duration  &nbsp&nbsp</p>
-                                        <p><?= $hike['duration']; ?></p>
-                                    </div>
-                                    <div>
-                                        <p class="heading"> Elevation</p>
-                                        <p><?= $hike['elevation'] . 'm'; ?></p>
-                                    </div>
-                                </div>
-                                
-                            </nav>
-
-                            <!-- <p class="is-size-6 content-text"><?= $hike['description']; ?></p> -->
-                        </div>
-                        
-                    </a>
-                </div>
-            </div>
-
-            <!-- <div class="column is-one-third">
-                <div class="card cont">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="<?= $hike['url']; ?>" alt="Placeholder image">
-                        </figure>
-                    </div>
-                </div>
-            </div> -->
-
-        <?php
+            include 'app/views/parts/cardHike.php';
         }
         ?>
 
     </div>
 </section>
-
 <?php include "footer.php"; ?>

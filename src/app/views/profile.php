@@ -7,9 +7,9 @@
 <?php include 'header.php'; ?>
 
 
-<section class="container">
-    <div class="column is-half is-offset-one-quarter has-text-centered">
-        <article class="panel is-primary">
+<div class="hero-body" style="background-image: url('./img/wooden-track.jpg'); background-size: cover;">
+    <div class="container column is-half is-offset-one-quarter has-text-centered">
+        <article class="panel is-primary has-background-white">
             <p class="panel-heading">User profile</p></br>
             <div class="blabla">
                 <div class="field">
@@ -44,7 +44,7 @@
             </div></br>
         </article>
     </div>
-</section>
+</div>
 
 <?php unset($_SESSION["error"]); ?>
 <?php include "footer.php"; ?>

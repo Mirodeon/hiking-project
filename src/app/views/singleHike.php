@@ -67,6 +67,7 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
                 </div>
             </div>
             <?php include '../app/controllers/singleHikeBtn.php'; ?>
+            <?php include '../app/controllers/availableTags.php'; ?>
         </div>
     </div>
 </div>

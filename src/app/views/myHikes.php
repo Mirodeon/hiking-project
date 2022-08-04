@@ -19,7 +19,7 @@
     
 </style>
 
-<section class="section hike-list">
+<section class="section hike-list has-background-light">
     <div class="columns is-centered flex">
 
         <?php

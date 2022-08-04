@@ -12,26 +12,20 @@
         justify-content: space-between;
     }
 </style>
-<div class="hero-body">
+<div class="hero-body has-background-light" style="background-image: url('./img/wooden-track.jpg'); background-size: cover;">
     <section class="container flex center">
         <div class="columns is-centered">
             <div class="column">
-                <article class="panel is-link">
+                <article class="panel is-link has-background-white">
                     <p class="panel-heading has-text-centered">About us</p>
                     <div class="column">
                         <p>For millions of people, Elderberry is the key to the great outdoors. From intrepid explorers and experienced off-roaders, to those who just bought their first road bike, our technology allows everybody to better find, plan and live authentic outdoor experiences, we built Elderberry for this very reason</p><br>
                         <article class="message is-success">
                             <div class="message-body">
-                                <p><em>"I believe that every day spent outside exploring is a valuable day; more valuable than anything you can buy"</em></p>
-                                <p style="text-align: right;">Mehdi HABARU Co-founder, Web developper</p>
+                                <p><em>"I believe that every day spent outside exploring is a valuable day; more valuable than anything you can buy. At the end of your life you will look back not on the things you owned but on the things you experienced"</em></p>
+                                <p style="text-align: right;">Jonas Spengler</p>
                             </div>
-                        </article>
-                        <article class="message is-link">
-                            <div class="message-body">
-                                <p><em>"At the end of your life you will look back not on the things you owned but on the things you experienced"</em></p>
-                                <p style="text-align: right;">Duc LUU Co-founder, Web developper</p>
-                            </div>
-                        </article>
+                        </article>                        
                     </div>
                 </article>
                 <div class="box">
@@ -51,7 +45,7 @@
                         </script>
                     </div>
 
-                    <p><strong>DONATE - SOCIAL</strong></p>
+                    <p><strong>Thanks for supporting us</strong></p>
                     <p><a href=""><span class="icon-text">
                                 <span class="icon">
                                     <i class="fa-brands fa-twitter fa-lg"></i>
@@ -94,7 +88,7 @@
             </div>
 
             <div class="column is-one-third">
-                <article class="panel is-success">
+                <article class="panel is-success has-background-white">
                     <p class="panel-heading has-text-centered">Contact us</p>
                     <div class="column" style="background-image: url('./img/mail_image.jpg'); background-repeat: no-repeat; background-size:cover; height:150px"></div>
                     <div class="column">

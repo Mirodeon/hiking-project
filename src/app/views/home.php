@@ -28,7 +28,7 @@ $db = new MyPDO();
 </style>
 
 <section class="section banner" style="background-image: url('./img/mountain.jpg'); background-size: cover;">
-  <div class="container hero-body">
+  <div class="container hero-body ">
     <div class="columns is-centered">
       <div class="column is-half">
         <p class="has-text-centered is-size-2 has-text-weight-bold has-text-white" style="text-shadow: 1px 1px 3px black;">Find your next hike</p>
@@ -49,7 +49,7 @@ $db = new MyPDO();
   </div>
 </section>
 
-<section class="section hike-list">
+<section class="section hike-list has-background-light">
   <p class="is-size-4 has-text-weight-bold">Last four</p></br>
   <div class="columns is-centered">
 

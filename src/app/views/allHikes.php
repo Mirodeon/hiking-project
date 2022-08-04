@@ -9,7 +9,7 @@
     }
 
     .container {
-        padding: 1em 0;
+        padding: 10px 0;
         float: left;
         width: 50%;
     }
@@ -125,8 +125,8 @@
     }
 </style>
 
-<section class="section hike-list">
-    <div class="columns is-centered flex">
+<section class="section hike-list has-background-light">
+    <div class="columns is-centered flex ">
 
         <?php
         $db = new MyPDO();

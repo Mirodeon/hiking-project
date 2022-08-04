@@ -2,7 +2,8 @@
 <?php require "app/views/parts/head.php"; ?>
 <?php include 'app/views/header.php'; ?>
 <?php include 'app/views/parts/styleCard.php'; ?>
-<section class="section hike-list">
+
+<section class="section hike-list has-background-light">
     <div class="columns is-centered flex">
 
         <?php
@@ -14,7 +15,6 @@
             include 'app/views/parts/cardHike.php';
         }
         ?>
-
     </div>
 </section>
 <?php include "footer.php"; ?>

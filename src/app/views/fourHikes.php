@@ -1,8 +1,9 @@
 <?php
+
 $getHikes = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id ORDER BY hikes.id DESC LIMIT 4');
 
 while ($hike = $getHikes->fetch()) {
-
+    $getid = $hike['id'];
     $description = $hike['description'];
     if (strlen($description) > 80) {
         $new_description = substr($description, 0, 80) . '...';
@@ -45,8 +46,13 @@ while ($hike = $getHikes->fetch()) {
                     </nav>
                     <div class="content">
                         <p class="is-size-6"><?= $new_description ?></p>
-                        <a href="#">#mountain</a> <a href="#">#lake</a>
-
+                        <p class="is-size-7">Tags: <a>
+                            <?php $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tags.id_tag join hikes on hikes.id = hikes_tags.id_hike WHERE hikes.id =' . "$getid");
+                            while ($tags = $getTags->fetch()) {
+                                ?><a href="#">#<?= $tags['name_tag']; ?></a><?php
+                            }
+                            ?>
+                        </a></p>
                         <div class="media">
                             <div class="media-content">
                                 <p class="title is-6"><?= $hike['firstname']; ?> <?= $hike['lastname']; ?></p>

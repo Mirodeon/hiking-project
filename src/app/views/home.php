@@ -28,6 +28,7 @@ $db = new MyPDO();
     text-decoration: none;
     color: black;
   }
+
   .bgSelect {
     background-color: #3e8ed0;
     color: #fff;
@@ -37,27 +38,37 @@ $db = new MyPDO();
 
 <section class="section banner" style="background-image: url('./img/mountain.jpg'); background-size: cover;">
   <div class="container hero-body ">
-    <div class="columns is-centered">
-      <div class="column is-half">
+    <div class="columns">
+      <div class="column">
         <p class="has-text-centered is-size-2 has-text-weight-bold has-text-white" style="text-shadow: 1px 1px 3px black;">Find your next hike</p>
         <form action="searchHike" method="post">
-          <p class="control has-icons-left">
-            <input class="input is-info is-rounded" type="search" placeholder="Hike search" name="search">
-            <span class="icon is-left">
-              <i class="fas fa-search" aria-hidden="true"></i>
-            </span>
+          <div class="field is-grouped is-justify-content-center">
+            <div class="is-expended">
+              <p class="control has-icons-left">
+                <input class="input is-info" type="search" placeholder="Hike search" name="search">
+                <span class="icon is-left">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="control">
+              <button class="button is-primary">Search!</button>
+            </div>
+            <div>
+            <?php include 'parts/dropDownTag.php'; ?>
+            </div>
             <select name="difficulty" style="display:none;">
               <option value="Easy" class="selectInput">Easy</option>
               <option value="Normal" class="selectInput">Normal</option>
               <option value="Hard" class="selectInput">Hard</option>
               <option value="Extreme" class="selectInput">Extreme</option>
             </select>
-            <button class="button is-rounded">Search!</button>
-          </p>
+
+            </p>
+          </div>
         </form>
       </div>
     </div>
-    <?php include 'parts/dropDownTag.php'; ?>
+    
   </div>
 </section>
 

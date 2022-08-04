@@ -135,8 +135,8 @@
 
         while ($hike = $myHikes->fetch()) {
         ?>
-
-            <div class="container">
+<?php include 'app/views/parts/cardHike.php'; ?>
+            <!--<div class="container">
                 <div class="content">
                     <a href="singleHike?id=<?= $hike['id']; ?>">
                         <div class="content-overlay"></div>
@@ -165,7 +165,7 @@
                         
                     </a>
                 </div>
-            </div>
+            </div> -->
         <?php
         }
         ?>

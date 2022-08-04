@@ -20,8 +20,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
 ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
-</br>
-<div class="card-content">
+<div class="card-content has-background-light">
+    <br>
     <div class="columns is-centered">
         <div class="column is-three-fifths">
             <div class="card">

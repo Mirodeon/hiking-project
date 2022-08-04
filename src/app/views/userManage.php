@@ -51,7 +51,6 @@ $getUsers = $db->query('SELECT * FROM users ORDER BY id');
                                 <td><?= $users['nickname']; ?></td>
                                 <td><?= $users['email']; ?></td>
                                 <td><?= $users['permission']; ?></td>
-                                <td><button class="button is-succes is-light is-small">Update</button></td>
                                 <td><a href="deleteUser?id=<?= $users['id']; ?>"><button class="button is-danger is-light is-small">Delete</button></a></td>
                             </tr>
                         <?php } ?>

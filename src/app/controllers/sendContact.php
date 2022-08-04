@@ -18,10 +18,10 @@ $host = $settings['mailer']['host'];
 if (isset($_POST['message'])) {
 
     $message = '<h1>Message from Elderberry hiking contact form</h1>
-<p><b>Email : </b>' . $_POST['email'] . '<br>
-<p><b>Firstname : </b>' . $_POST['firstname'] . '<br>
-<p><b>Lastname : </b>' . $_POST['lastname'] . '<br>
-<p><b>Subject : </b>' . $_POST['subject'] . '<br>
+<p><b>Email : </b>' . htmlspecialchars($_POST['email']) . '<br>
+<p><b>Firstname : </b>' . htmlspecialchars($_POST['firstname']) . '<br>
+<p><b>Lastname : </b>' . htmlspecialchars($_POST['lastname']) . '<br>
+<p><b>Subject : </b>' . htmlspecialchars($_POST['subject']) . '<br>
 <p><b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>
 <img src="https://luuduc34.github.io/weather-app/img/mail_image.jpg" alt="Elderberry mail image">';
 

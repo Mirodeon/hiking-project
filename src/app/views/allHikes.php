@@ -2,7 +2,7 @@
 <?php require "app/views/parts/head.php"; ?>
 <?php include 'app/views/header.php'; ?>
 <?php include 'app/views/parts/styleCard.php'; ?>
-<style>
+<!-- <style>
     .flex {
         flex-wrap: wrap;
     }
@@ -122,7 +122,7 @@
     .relative {
         position: relative;
     }
-</style>
+</style> -->
 
 <section class="section hike-list has-background-light">
     <div class="columns is-centered flex ">

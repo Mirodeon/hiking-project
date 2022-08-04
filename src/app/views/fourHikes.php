@@ -46,10 +46,10 @@ while ($hike = $getHikes->fetch()) {
                     </nav>
                     <div class="content">
                         <p class="is-size-6"><?= $new_description ?></p>
-                        <p class="is-size-7">Tags: <a href="#">
+                        <p class="is-size-7">Tags: <a>
                             <?php $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tags.id_tag join hikes on hikes.id = hikes_tags.id_hike WHERE hikes.id =' . "$getid");
                             while ($tags = $getTags->fetch()) {
-                                ?>#<?= $tags['name_tag']; ?><?php
+                                ?><a href="#">#<?= $tags['name_tag']; ?></a><?php
                             }
                             ?>
                         </a></p>

@@ -20,6 +20,11 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
 ?>
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
+<style>
+    .flex {
+        display: flex;
+    }
+</style>
 <div class="card-content has-background-light">
     <br>
     <div class="columns is-centered">
@@ -35,7 +40,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
         <div class="column">
             <p class="has-text-centered has-text-weight-semibold hike-name is-size-5"><?= $shike['name']; ?></p>
             <p class="is-size-7 has-text-centered">Difficulty : <?= $shike['difficulty']; ?></p></br>
-            <nav class="level">
+            <div class="level flex">
+                <div style="width:1px"></div>
                 <div class="level-item has-text-centered">
                     <div>
                         <p class="heading">Distance</p>
@@ -54,7 +60,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
                         <p><?= $shike['elevation'] . "m"; ?></p>
                     </div>
                 </div>
-            </nav>
+                <div style="width:1px"></div>
+            </div>
             <div class="content">
                 <p class="is-size-6"><?= $shike['description']; ?></p>
                 <a href="#">#mountain</a> <a href="#">#lake</a>

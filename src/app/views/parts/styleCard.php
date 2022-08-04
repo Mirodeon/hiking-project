@@ -4,7 +4,6 @@
     }
 
     .container {
-        padding: 1em 0;
         float: left;
         width: 50%;
     }

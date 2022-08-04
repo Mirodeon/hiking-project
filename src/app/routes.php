@@ -34,6 +34,7 @@ $routes = [
         '/editProfile' => 'app/views/register.php',
         '/editProfileContr' => 'app/controllers/editProfileContr.php',
         '/sendContact' => 'app/controllers/sendContact.php',
-        '/searchHike' => 'app/controllers/searchHikeContr.php'
+        '/searchHike' => 'app/controllers/searchHikeContr.php',
+        '/addTag' => 'app/controllers/addTagContr.php'
     ],
 ];

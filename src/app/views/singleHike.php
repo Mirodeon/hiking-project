@@ -71,5 +71,27 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
         </div>
     </div>
 </div>
+<script type="text/javascript">
+  let control = [...document.querySelectorAll(".selectControl")];
+  let input = [...document.querySelectorAll(".selectInput")];
+  let title = document.querySelector("#titleOption");
+
+  control.forEach((option, i) => {
+    option.addEventListener("click", () => {
+      resetSelected();
+      input[i].setAttribute("selected", "selected");
+      control[i].classList.add("bgSelect");
+      title.innerHTML = control[i].textContent;
+    });
+  });
+  const resetSelected = () => {
+    input.forEach((option) => {
+      option.removeAttribute("selected");
+    });
+    control.forEach((option) => {
+      option.classList.remove("bgSelect");
+    });
+  };
+</script>
 <?php unset($_SESSION["hike"]); ?>
 <?php include "footer.php"; ?>

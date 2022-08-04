@@ -1,4 +1,4 @@
-<div class="dropdown is-hoverable">
+<!-- <div class="dropdown is-hoverable">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
       <span>Tags</span>
@@ -32,11 +32,11 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <div class="dropdown is-hoverable">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-      <span>Difficulty</span>
+      <span id="titleOption">Difficulty</span>
       <span class="icon is-small">
         <i class="fas fa-angle-down" aria-hidden="true"></i>
       </span>
@@ -46,16 +46,16 @@
     <div class="dropdown-content">
       <div class="dropdown-item">
 
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item selectControl">
           easy
         </a>
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item selectControl">
           normal
         </a>
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item selectControl">
           hard
         </a>
-        <a href="#" class="dropdown-item">
+        <a href="#" class="dropdown-item selectControl">
           extreme
         </a>
         

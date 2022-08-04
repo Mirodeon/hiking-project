@@ -33,6 +33,7 @@ $routes = [
         '/editHikeContr' => 'app/controllers/editHikeContr.php',
         '/editProfile' => 'app/views/register.php',
         '/editProfileContr' => 'app/controllers/editProfileContr.php',
-        '/sendContact' => 'app/controllers/sendContact.php'
+        '/sendContact' => 'app/controllers/sendContact.php',
+        '/searchHike' => 'app/controllers/searchHikeContr.php'
     ],
 ];

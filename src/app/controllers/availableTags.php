@@ -1,14 +1,10 @@
 <?php
-echo'pouet';
 $availableTags = $db->prepare('SELECT name_tag FROM tags
         LEFT JOIN hikes_tags ON tags.id = hikes_tags.id_tag 
         WHERE hikes_tags.id_hike <> :hikeId
         ORDER BY name_tag DESC');
-        echo 'pouet2';
 $availableTags->bindParam(':hikeId', $shike['id']);
-echo 'pouet3';
 $availableTags->execute();
-echo 'pouet4';
 ?>
 <div class="dropdown is-hoverable">
     <div class="dropdown-trigger">

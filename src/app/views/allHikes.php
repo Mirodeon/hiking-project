@@ -1,15 +1,7 @@
 <?php $title = "All Hikes"; ?>
-<<<<<<< HEAD
 <?php require "app/views/parts/head.php"; ?>
 <?php include 'app/views/header.php'; ?>
 <?php include 'app/views/parts/styleCard.php'; ?>
-<section class="section hike-list">
-    <div class="columns is-centered flex">
-=======
-
-<?php require "parts/head.php"; ?>
-<?php include 'header.php'; ?>
-
 <style>
     .flex {
         flex-wrap: wrap;
@@ -134,7 +126,6 @@
 
 <section class="section hike-list has-background-light">
     <div class="columns is-centered flex ">
->>>>>>> duc
 
         <?php
         $db = new MyPDO();

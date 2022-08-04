@@ -17,7 +17,10 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
 } else {
     header("location: 404");
 }
+$getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tags.id_tag join hikes on hikes.id = hikes_tags.id_hike WHERE hikes.id =' . "$getid");
+
 ?>
+
 <?php require "parts/head.php"; ?>
 <?php include 'header.php'; ?>
 <style>
@@ -64,7 +67,12 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
             </div>
             <div class="content">
                 <p class="is-size-6"><?= $shike['description']; ?></p>
-                <a href="#">#mountain</a> <a href="#">#lake</a>
+                <p>Tags: <?php
+                    while ($tags = $getTags->fetch()) {
+                        ?>#<?= $tags['name_tag']; ?><?php
+                    }
+                    ?>
+                </p>
                 <div class="media">
                     <div class="media-content">
                         <p class="title is-6"><?= $shike['firstname']; ?> <?= $shike['lastname']; ?></p>

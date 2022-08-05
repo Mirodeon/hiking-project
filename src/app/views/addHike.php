@@ -31,44 +31,44 @@
                     <div class="columns">
                         <div class="column">
                             <div class="field">
-                                <label for="name" class="label is-small">Name</label>
+                                <label for="name" class="label">Name</label>
                             </div>
                             <div class="control has-icons-left">
-                                <input type="text" class="input is-small" placeholder="Hike name" name="name" <?php if (isset($_SESSION['editHike'])) {
+                                <input type="text" class="input" placeholder="Hike name" name="name" <?php if (isset($_SESSION['editHike'])) {
                                                                                                                     echo 'value="' . $_SESSION['editHike']["name"] . '"';
                                                                                                                 } ?>>
-                                <span class="icon is-small is-left">
+                                <span class="icon is-left">
                                     <i class="fa fa-blind"></i>
                                 </span>
                             </div>
                             <div class="field">
-                                <label for="distance" class="label is-small">Distance: km</label>
+                                <label for="distance" class="label">Distance: km</label>
                             </div>
                             <div class="control has-icons-left">
-                                <input type="number" class="input is-small" placeholder="Hiking distance" name="distance" min="0" step="0.1" <?php if (isset($_SESSION['editHike'])) {
+                                <input type="number" class="input" placeholder="Hiking distance" name="distance" min="0" step="0.1" <?php if (isset($_SESSION['editHike'])) {
                                                                                                                                                     echo 'value="' . $_SESSION['editHike']["distance"] . '"';
                                                                                                                                                 } ?>>
-                                <span class="icon is-small is-left">
+                                <span class="icon is-left">
                                     <i class="fa fa-globe"></i>
                                 </span>
                             </div></br>
                             <div class="columns">
                                 <div class="column">
                                     <div class="field">
-                                        <label for="durationH" class="label is-small">Duration</label>
+                                        <label for="durationH" class="label">Duration</label>
                                     </div>
                                     <div class="control has-icons-left">
-                                        <input type="number" class="input is-small" placeholder="Hour" name="durationH" min="0" step="1" <?php if (isset($_SESSION['editHike'])) {
+                                        <input type="number" class="input" placeholder="Hour" name="durationH" min="0" step="1" <?php if (isset($_SESSION['editHike'])) {
                                                                                                                                                 echo 'value="' . $_SESSION['editHike']["durationH"] . '"';
                                                                                                                                             } ?>>
-                                        <span class="icon is-small is-left">
+                                        <span class="icon is-left">
                                             <i class="fa fa-clock-o"></i>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="column is-1">
                                     <div class="field">
-                                        <label for="durationH" class="label is-small" style="visibility:hidden">.</label>
+                                        <label for="durationH" class="label" style="visibility:hidden">.</label>
                                     </div>
                                     <div class="control has-icons-left">
                                         <p>h</p>
@@ -76,13 +76,13 @@
                                 </div>
                                 <div class="column">
                                     <div class="field">
-                                        <label for="durationM" class="label is-small" style="visibility:hidden">.</label>
+                                        <label for="durationM" class="label" style="visibility:hidden">.</label>
                                     </div>
                                     <div class="control has-icons-left">
-                                        <input type="number" class="input is-small" placeholder="Minutes" name="durationM" min="0" max="59" step="1" <?php if (isset($_SESSION['editHike'])) {
+                                        <input type="number" class="input" placeholder="Minutes" name="durationM" min="0" max="59" step="1" <?php if (isset($_SESSION['editHike'])) {
                                                                                                                                                             echo 'value="' . $_SESSION['editHike']["durationM"] . '"';
                                                                                                                                                         } ?>>
-                                        <span class="icon is-small is-left">
+                                        <span class="icon is-left">
                                             <i class="fa fa-clock-o"></i>
                                         </span>
                                     </div>
@@ -90,9 +90,9 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label for="elevation" class="label is-small">Difficulty</label>
+                                <label for="elevation" class="label">Difficulty</label>
                             </div>
-                            <div class="select is-small">
+                            <div class="select">
                                 <select name="difficulty">
                                     <option value="Easy" <?php if ($_SESSION['editHike']['difficulty'] == 'Easy') {
                                                                 echo "selected='selected'";
@@ -116,18 +116,18 @@
                                 <label for="elevation" class="label is-small">Elevation: m</label>
                             </div>
                             <div class="control has-icons-left">
-                                <input type="number" class="input is-small" placeholder="Elevation gain of the hike" name="elevation" min="0" step="1" <?php if (isset($_SESSION['editHike'])) {
+                                <input type="number" class="input" placeholder="Elevation gain of the hike" name="elevation" min="0" step="1" <?php if (isset($_SESSION['editHike'])) {
                                                                                                                                                             echo 'value="' . $_SESSION['editHike']["elevation"] . '"';
                                                                                                                                                         } ?>>
-                                <span class="icon is-small is-left">
+                                <span class="icon is-left">
                                     <i class="fa fa-line-chart"></i>
                                 </span>
                             </div></br>
                             <div class="field">
-                                <label for="description" class="label is-small">Description</label>
+                                <label for="description" class="label">Description</label>
                             </div>
                             <div class="control has-icons-left">
-                                <textarea class="textarea is-small" placeholder="Description of the hike" name="description"><?php if (isset($_SESSION['editHike'])) {
+                                <textarea class="textarea" placeholder="Description of the hike" name="description"><?php if (isset($_SESSION['editHike'])) {
                                                                                                                                     echo $_SESSION['editHike']["description"];
                                                                                                                                 } ?></textarea>
                                 <!-- <span class="icon is-small is-left">
@@ -135,7 +135,7 @@
                         </span> -->
                             </div></br>
                             <div class="field">
-                                <button class="button is-success is-small" type="submit" name="submit" <?php if (isset($_SESSION['editHike'])) {
+                                <button class="button is-success" type="submit" name="submit" <?php if (isset($_SESSION['editHike'])) {
                                                                                                             echo 'value="' . $_POST["edit"] . '"';
                                                                                                         } else {
                                                                                                             echo 'value="addHike"';
@@ -148,7 +148,7 @@
 
                         </div>
                     </div>
-                    <p class="label is-small has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
+                    <p class="label has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
                 </form>
 
             </div>

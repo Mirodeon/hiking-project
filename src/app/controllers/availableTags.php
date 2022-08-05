@@ -15,7 +15,7 @@ if ($_SESSION["user"]["id"] == $shike['user_id'] || $_SESSION["user"]["permissio
             <div class="dropdown-menu" id="dropdown-menu4" role="menu">
                 <div class="dropdown-content">
                     <div class="dropdown-item">
-                        <?php require_once 'app/controllers/testTagId.php';
+                        <?php
                         while ($listTags = $availableTags->fetch()) {
                         ?>
                             <a class="dropdown-item selectControl">

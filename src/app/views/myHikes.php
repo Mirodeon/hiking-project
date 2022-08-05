@@ -12,10 +12,13 @@
     .flex {
         flex-wrap: wrap;
     }
-
     a {
         text-decoration: none;
         color: black;
+    }
+    .flexx {
+        display: flex;
+        justify-content: space-around;
     }
 </style>
 
@@ -49,8 +52,8 @@
                         <div class="card-content">
 
                             <p class="has-text-centered has-text-weight-semibold hike-name is-size-5"><?= $hike['name']; ?></p>
-                            <p class="is-size-7 has-text-centered">Difficulty : <?= $hike['difficulty']; ?></p></br>
-                            <nav class="level">
+                            <p class="is-size-7 has-text-centered">Difficulty : <?= $hike['difficulty']; ?></p><br>
+                            <nav class="level flexx">
                                 <div class="level-item has-text-centered">
                                     <div>
                                         <p class="heading">Distance</p>

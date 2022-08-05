@@ -21,7 +21,7 @@ class Login extends Dbconnect
                     $_SESSION["user"]['email'] = $result["email"];
                     $_SESSION["user"]['permission'] = $result["permission"];
                     if ($result["permission"] == "administrateur") {
-                        header("location: profile");
+                        header("location: welcome");
                     } else {
                         header("location: home");
                     }

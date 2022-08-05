@@ -1,9 +1,16 @@
+<style>
+    .flex {
+display: flex;
+flex-wrap: wrap;
+    }
+</style>
+
 <?php
 if ($_SESSION["user"]["id"] == $shike['user_id'] || $_SESSION["user"]["permission"] == "administrateur") {
     $availableTags = $db->query('SELECT * FROM tags ORDER BY name_tag DESC;');
 ?>
-    <div class="columns is-centered">
-        <div class="dropdown is-hoverable column is-half">
+    <div class="columns is-centered flex">
+        <div class="dropdown is-hoverable column is-half has-text-right">
             <div class="dropdown-trigger">
                 <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
                     <span id="titleOption">Add a tag</span>
@@ -28,7 +35,7 @@ if ($_SESSION["user"]["id"] == $shike['user_id'] || $_SESSION["user"]["permissio
                 </div>
             </div>
         </div>
-        <form method="post" class="column has-text-right is-half" action="addTag">
+        <form method="post" class="column is-half" action="addTag">
             <select name="tag" style="display:none;">
                 <?php
                 $availableTags = $db->query('SELECT * FROM tags ORDER BY name_tag DESC');

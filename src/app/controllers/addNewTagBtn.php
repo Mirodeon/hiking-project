@@ -4,7 +4,6 @@ if ($_SESSION["user"]["id"] == $shike['user_id'] || $_SESSION["user"]["permissio
 ?>
 <div class="columns">
       <div class="column">
-        <p class="has-text-centered is-size-2 has-text-weight-bold has-text-white" style="text-shadow: 1px 1px 3px black;">Find your next hike</p>
         <form action="newTag" method="post">
           <div class="field is-grouped is-justify-content-center">
             <div class="is-expended">
@@ -15,7 +14,7 @@ if ($_SESSION["user"]["id"] == $shike['user_id'] || $_SESSION["user"]["permissio
                 </span>
             </div>
             <div class="control">
-              <button class="button is-primary" type="submit" name="newTag">Search!</button>
+              <button class="button is-primary" type="submit" name="submitTag" value="<?= $shike['id']; ?>">Create tag</button>
             </div>
             </p>
           </div>

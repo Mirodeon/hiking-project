@@ -83,6 +83,8 @@ $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tag
             </div>
             <?php include '../app/controllers/singleHikeBtn.php'; ?>
             <?php include '../app/controllers/availableTags.php'; ?>
+            <?php include '../app/controllers/addNewTagBtn.php'; ?>
+            <p class="label is-small has-text-danger"><?= (isset($_SESSION['error'])) ? $_SESSION['error'] : "" ?></p>
         </div>
     </div>
 </div>
@@ -109,4 +111,5 @@ $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tag
   };
 </script>
 <?php unset($_SESSION["hike"]); ?>
+<?php unset($_SESSION["error"]); ?>
 <?php include "footer.php"; ?>

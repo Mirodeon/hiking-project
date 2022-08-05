@@ -35,6 +35,7 @@ $routes = [
         '/editProfileContr' => 'app/controllers/editProfileContr.php',
         '/sendContact' => 'app/controllers/sendContact.php',
         '/searchHike' => 'app/controllers/searchHikeContr.php',
-        '/addTag' => 'app/controllers/addTagContr.php'
+        '/addTag' => 'app/controllers/addTagContr.php',
+        '/newTag' => 'app/controllers/createTagContr.php'
     ],
 ];

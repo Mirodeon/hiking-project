@@ -16,10 +16,10 @@ if ($_SESSION["user"]["id"] == $shike['user_id'] || $_SESSION["user"]["permissio
                 <div class="dropdown-content">
                     <div class="dropdown-item">
                         <?php
-                        while ($tags = $availableTags->fetch()) {
+                        while ($listTags = $availableTags->fetch()) {
                         ?>
                             <a class="dropdown-item selectControl">
-                                <?= $tags['name_tag']; ?>
+                                <?= $listTags['name_tag']; ?>
                             </a>
                         <?php
                         }

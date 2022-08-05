@@ -68,10 +68,11 @@ $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tag
             <div class="content">
                 <p class="is-size-6"><?= $shike['description']; ?></p>
                 <p>Tags: <?php
-                    while ($tags = $getTags->fetch()) {
-                        ?>#<?= $tags['name_tag']; ?><?php
-                    }
-                    ?>
+                            while ($tags = $getTags->fetch()) {
+                            ?>#<?= $tags['name_tag']; ?>
+                <?php
+                            }
+                ?>
                 </p>
                 <div class="media">
                     <div class="media-content">
@@ -89,26 +90,26 @@ $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tag
     </div>
 </div>
 <script type="text/javascript">
-  let control = [...document.querySelectorAll(".selectControl")];
-  let input = [...document.querySelectorAll(".selectInput")];
-  let title = document.querySelector("#titleOption");
+    let control = [...document.querySelectorAll(".selectControl")];
+    let input = [...document.querySelectorAll(".selectInput")];
+    let title = document.querySelector("#titleOption");
 
-  control.forEach((option, i) => {
-    option.addEventListener("click", () => {
-      resetSelected();
-      input[i].setAttribute("selected", "selected");
-      control[i].classList.add("bgSelect");
-      title.innerHTML = control[i].textContent;
+    control.forEach((option, i) => {
+        option.addEventListener("click", () => {
+            resetSelected();
+            input[i].setAttribute("selected", "selected");
+            control[i].classList.add("bgSelect");
+            title.innerHTML = control[i].textContent;
+        });
     });
-  });
-  const resetSelected = () => {
-    input.forEach((option) => {
-      option.removeAttribute("selected");
-    });
-    control.forEach((option) => {
-      option.classList.remove("bgSelect");
-    });
-  };
+    const resetSelected = () => {
+        input.forEach((option) => {
+            option.removeAttribute("selected");
+        });
+        control.forEach((option) => {
+            option.classList.remove("bgSelect");
+        });
+    };
 </script>
 <?php unset($_SESSION["hike"]); ?>
 <?php unset($_SESSION["error"]); ?>

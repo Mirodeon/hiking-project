@@ -54,21 +54,21 @@ $db = new MyPDO();
               <button class="button is-primary">Search!</button>
             </div>
             <div>
-            <?php include 'parts/dropDownTag.php'; ?>
+              <?php include 'parts/dropDownTag.php'; ?>
             </div>
             <select name="difficulty" style="display:none;">
-              <option value="Easy" class="selectInput">Easy</option>
-              <option value="Normal" class="selectInput">Normal</option>
-              <option value="Hard" class="selectInput">Hard</option>
-              <option value="Extreme" class="selectInput">Extreme</option>
+              <option value="Easy" class="selectInputD">Easy</option>
+              <option value="Normal" class="selectInputD">Normal</option>
+              <option value="Hard" class="selectInputD">Hard</option>
+              <option value="Extreme" class="selectInputD">Extreme</option>
             </select>
-
+            <?php include '../app/controllers/searchTags.php'; ?>
             </p>
           </div>
         </form>
       </div>
     </div>
-    
+
   </div>
 </section>
 
@@ -79,19 +79,21 @@ $db = new MyPDO();
   </div>
 </section>
 <script type="text/javascript">
-  let control = [...document.querySelectorAll(".selectControl")];
-  let input = [...document.querySelectorAll(".selectInput")];
-  let title = document.querySelector("#titleOption");
-
-  control.forEach((option, i) => {
-    option.addEventListener("click", () => {
-      resetSelected();
-      input[i].setAttribute("selected", "selected");
-      control[i].classList.add("bgSelect");
-      title.innerHTML = input[i].value;
+  const selectorInput = (controlClass, inputClass, titleId) => {
+    let control = [...document.querySelectorAll(`${controlClass}`)];
+    let input = [...document.querySelectorAll(`${inputClass}`)];
+    let title = document.querySelector(`${titleId}`);
+    control.forEach((option, i) => {
+      option.addEventListener("click", () => {
+        resetSelected(control, input);
+        input[i].setAttribute("selected", "selected");
+        control[i].classList.add("bgSelect");
+        title.innerHTML = input[i].innerHTML;
+      });
     });
-  });
-  const resetSelected = () => {
+  };
+
+  const resetSelected = (control, input) => {
     input.forEach((option) => {
       option.removeAttribute("selected");
     });
@@ -99,5 +101,13 @@ $db = new MyPDO();
       option.classList.remove("bgSelect");
     });
   };
+  let controlDifficulty = ".selectControlD";
+  let inputDifficulty = ".selectInputD";
+  let titleDifficulty = "#titleOptionD";
+  let controlTag = ".selectControlT";
+  let inputTag = ".selectInputT";
+  let titleTag = "#titleOptionT";
+  selectorInput(controlDifficulty, inputDifficulty, titleDifficulty);
+  selectorInput(controlTag, inputTag, titleTag);
 </script>
 <?php include 'footer.php'; ?>

@@ -23,7 +23,7 @@
 <?php
 //print_r($_SESSION);
 if (isset($_SESSION['user'])) {
-  echo 'La session est définie.';
+  //echo 'La session est définie.';
 } else {
   echo 'Les variables de session ont été supprimées';
 };

@@ -1,3 +1,10 @@
+<style>
+    .flex {
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+
 <?php
 
 $getHikes = $db->query('SELECT users.firstname, users.lastname, users.nickname, hikes.id, hikes.name, hikes.difficulty, hikes.creation_date, hikes.distance, hikes.duration, hikes.elevation, hikes.description, hikes.url FROM users INNER JOIN hikes ON users.id = hikes.user_id ORDER BY hikes.id DESC LIMIT 4');
@@ -24,7 +31,7 @@ while ($hike = $getHikes->fetch()) {
 
                     <p class="has-text-centered has-text-weight-semibold hike-name is-size-5"><?= $hike['name']; ?></p>
                     <p class="is-size-7 has-text-centered">Difficulty : <?= $hike['difficulty']; ?></p></br>
-                    <nav class="level">
+                    <nav class="level flex">
                         <div class="level-item has-text-centered">
                             <div>
                                 <p class="heading">Distance</p>

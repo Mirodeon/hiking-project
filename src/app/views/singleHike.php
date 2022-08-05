@@ -26,6 +26,7 @@ $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tag
 <style>
     .flex {
         display: flex;
+        justify-content: space-around;
     }
 </style>
 <div class="card-content has-background-light">
@@ -43,12 +44,11 @@ $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tag
         <div class="column">
             <p class="has-text-centered has-text-weight-semibold hike-name is-size-5"><?= $shike['name']; ?></p>
             <p class="is-size-7 has-text-centered">Difficulty : <?= $shike['difficulty']; ?></p></br>
-            <div class="level flex">
-                <div style="width:1px"></div>
+            <nav class="level flex">
                 <div class="level-item has-text-centered">
                     <div>
                         <p class="heading">Distance</p>
-                        <p><?= $shike['distance'] . "km"; ?></p>
+                        <p><?= $shike['distance'] . 'km'; ?></p>
                     </div>
                 </div>
                 <div class="level-item has-text-centered">
@@ -60,11 +60,10 @@ $getTags = $db->query('SELECT * FROM tags JOIN hikes_tags ON tags.id = hikes_tag
                 <div class="level-item has-text-centered">
                     <div>
                         <p class="heading">Elevation</p>
-                        <p><?= $shike['elevation'] . "m"; ?></p>
+                        <p><?= $shike['elevation'] . 'm'; ?></p>
                     </div>
                 </div>
-                <div style="width:1px"></div>
-            </div>
+            </nav>
             <div class="content">
                 <p class="is-size-6"><?= $shike['description']; ?></p>
                 <p>Tags: <?php

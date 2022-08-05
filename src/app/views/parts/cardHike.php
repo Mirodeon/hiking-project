@@ -1,4 +1,4 @@
-<div class="container">
+<div>
     <div class="content">
         <a href="singleHike?id=<?= $hike['id']; ?>">
             <div class="content-overlay"></div>

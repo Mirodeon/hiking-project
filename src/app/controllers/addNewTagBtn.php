@@ -10,7 +10,7 @@ if ($_SESSION["user"]["id"] == $shike['user_id'] || $_SESSION["user"]["permissio
               <p class="control has-icons-left">
                 <input class="input is-info" type="text" placeholder="Create New Tag" name="newTag">
                 <span class="icon is-left">
-                  <i class="fas fa-search" aria-hidden="true"></i>
+                  <i class="fa-solid fa-hashtag" aria-hidden="true"></i>
                 </span>
             </div>
             <div class="control">

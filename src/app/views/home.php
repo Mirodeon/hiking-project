@@ -34,6 +34,10 @@ $db = new MyPDO();
     color: #fff;
     border-radius: 2px;
   }
+    .flex {
+display: flex;
+flex-wrap: wrap;
+    }
 </style>
 
 <section class="section banner" style="background-image: url('./img/mountain.jpg'); background-size: cover;">
@@ -42,7 +46,7 @@ $db = new MyPDO();
       <div class="column">
         <p class="has-text-centered is-size-2 has-text-weight-bold has-text-white" style="text-shadow: 1px 1px 3px black;">Find your next hike</p>
         <form action="searchHike" method="post">
-          <div class="field is-grouped is-justify-content-center">
+          <div class="field is-grouped is-justify-content-center flex">
             <div class="is-expended">
               <p class="control has-icons-left">
                 <input class="input is-info" type="search" placeholder="Hike search" name="search">

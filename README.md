@@ -59,7 +59,7 @@ Some about us and if you have to contact us, it's the right place.
 - MVC architecture.
 - Agile methodology.
 
-## Link to the app
+## Link to the website
 
 [Elderberry Hiking Project](https://hiking-project-becode2022.herokuapp.com/)
 

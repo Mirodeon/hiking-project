@@ -43,7 +43,7 @@ In the same way of user management page, administrator can edit or delete hike(s
 
 ## Contact page :
 ![Contact page](./img/contact.jpg)
-In this page, user can add new hike.
+Some about us and if you have to contact us, it's the right place.
 
 
 ## Goals of this challenge :

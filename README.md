@@ -2,10 +2,10 @@
 
 This app will be able to store your favorites trails ! This website must be collaborative. It means that users can connect & add their own hikes. Help hikers to connect each others for building a better world.
 
-### The home page :
+## The home page :
 ![Screenshot of the app](./img/home.jpg)
 
-### User must signed up before add or edit a hike :
+## User must signed up before add or edit a hike :
 ![Signup](./img/signup.jpg)
 ## Welcome new member ! :
 ![Welcome !](./img/welcome.jpg)
@@ -44,7 +44,6 @@ In the same way of user management page, administrator can edit or delete hike(s
 ## Contact page :
 ![Contact page](./img/contact.jpg)
 In this page, user can add new hike.
-
 
 
 ## Goals of this challenge :

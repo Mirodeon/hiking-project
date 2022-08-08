@@ -63,6 +63,12 @@ In this page, user can add new hike.
 
 [Elderberry Hiking Project](https://hiking-project-becode2022.herokuapp.com/)
 
+## Authors
+
+- [Mehdi Habaru](https://github.com/Mirodeon)
+
+- [Duc Luu](https://github.com/luuduc34)
+
 ## Language used
 
 Javascript, HTML, CSS(Bulma framework), PHP

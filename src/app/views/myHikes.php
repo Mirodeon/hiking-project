@@ -77,7 +77,7 @@
                                 <p class="is-size-6"><?= $new_description ?></p>
                                 <p class="is-size-7">Tags:
                                     <a>
-                                        <?php include 'models/getTags.php'; ?>
+                                        <?php include '../app/models/getTags.php'; ?>
                                     </a>
                                 </p>
                                 <div class="media">
